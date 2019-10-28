@@ -4,7 +4,6 @@
 <dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>wechat</string>
 		<string>livesafeapp</string>
 	</array>
 	<key>LSApplicationCategoryType</key>

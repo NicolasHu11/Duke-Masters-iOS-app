@@ -55,9 +55,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPj-ef-9Fd">
-                                <rect key="frame" x="134" y="398" width="106" height="30"/>
+                                <rect key="frame" x="135" y="406" width="106" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="To liveSafe App"/>
+                                <connections>
+                                    <action selector="toLiveSafe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rfS-dT-fVy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="117"/>
+            <point key="canvasLocation" x="138.40000000000001" y="116.49175412293854"/>
         </scene>
         <!--Room Reservation View Controller-->
         <scene sceneID="fbU-eD-gf4">

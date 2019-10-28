@@ -57,7 +57,8 @@ class SafetyPageViewController: UIViewController {
     }
     
     @IBAction func toLiveSafe(_ sender: Any) {
-        if let url = URL(string: "livesafeapp://"){
+   
+    if let url = URL(string: "livesafeapp://"){
             print(url)
             if UIApplication.shared.canOpenURL(url) == true{
                 print("Open liveSafe app!")
