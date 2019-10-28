@@ -16,6 +16,8 @@
 		AE1691EC2362863E004C3289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1691EA2362863E004C3289 /* LaunchScreen.storyboard */; };
 		AE1691F72362863E004C3289 /* Duke_Masters_ProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1691F62362863E004C3289 /* Duke_Masters_ProgramTests.swift */; };
 		AE1692022362863E004C3289 /* Duke_Masters_ProgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1692012362863E004C3289 /* Duke_Masters_ProgramUITests.swift */; };
+		AE3F0F9D236299E2008BE933 /* SafetyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F0F9C236299E2008BE933 /* SafetyPageViewController.swift */; };
+		AE3F0F9F23660814008BE933 /* RoomReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F0F9E23660814008BE933 /* RoomReservationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		AE1691FD2362863E004C3289 /* Duke Masters ProgramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duke Masters ProgramUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1692012362863E004C3289 /* Duke_Masters_ProgramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duke_Masters_ProgramUITests.swift; sourceTree = "<group>"; };
 		AE1692032362863E004C3289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE3F0F9C236299E2008BE933 /* SafetyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPageViewController.swift; sourceTree = "<group>"; };
+		AE3F0F9E23660814008BE933 /* RoomReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomReservationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				AE1691DE2362863C004C3289 /* SceneDelegate.swift */,
 				AE1691E02362863C004C3289 /* ViewController.swift */,
 				AE1691E22362863C004C3289 /* Main.storyboard */,
+				AE3F0F9E23660814008BE933 /* RoomReservationViewController.swift */,
+				AE3F0F9C236299E2008BE933 /* SafetyPageViewController.swift */,
 				AE1691E82362863E004C3289 /* Assets.xcassets */,
 				AE1691EA2362863E004C3289 /* LaunchScreen.storyboard */,
 				AE1691ED2362863E004C3289 /* Info.plist */,
@@ -262,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3F0F9D236299E2008BE933 /* SafetyPageViewController.swift in Sources */,
 				AE1691E12362863C004C3289 /* ViewController.swift in Sources */,
 				AE1691E72362863C004C3289 /* Duke_Masters_Program.xcdatamodeld in Sources */,
 				AE1691DD2362863C004C3289 /* AppDelegate.swift in Sources */,
+				AE3F0F9F23660814008BE933 /* RoomReservationViewController.swift in Sources */,
 				AE1691DF2362863C004C3289 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
