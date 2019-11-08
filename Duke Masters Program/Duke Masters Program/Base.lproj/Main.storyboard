@@ -43,6 +43,9 @@
                                 <state key="normal" title="MEM Directory">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="O7Y-cu-Thk" kind="presentation" id="sTN-li-zM9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OK6-20-T3o">
                                 <rect key="frame" x="54" y="415" width="266" height="42"/>
@@ -139,6 +142,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="O7Y-cu-Thk" kind="presentation" id="QTK-wl-xZD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nif-9H-g0e">
                                 <rect key="frame" x="0.0" y="342" width="266" height="6"/>
@@ -226,6 +232,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="dsH-Ud-5Oj" kind="presentation" id="YPu-dx-Iyk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kd1-Cb-sKV">
                                 <rect key="frame" x="0.0" y="508" width="266" height="6"/>
@@ -293,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQG-Fr-5na" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2749.5999999999999" y="-49.025487256371818"/>
+            <point key="canvasLocation" x="2750" y="-49"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="GXj-bs-p0f">
@@ -431,12 +440,341 @@
             </objects>
             <point key="canvasLocation" x="2826" y="684"/>
         </scene>
+        <!--DirectoryTable-->
+        <scene sceneID="jna-CP-K1l">
+            <objects>
+                <tableViewController id="nt6-Ca-epl" userLabel="DirectoryTable" customClass="DirectoryTableVC" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rqI-W5-jib">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="P8j-AK-CDl">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentCell" rowHeight="126" id="TnC-xc-zz0" customClass="DirectoryTableViewCell" customModule="Duke_Masters_Program" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="126"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TnC-xc-zz0" id="MPl-h4-HSb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="286" translatesAutoresizingMaskIntoConstraints="NO" id="HFq-mv-7PT">
+                                            <rect key="frame" x="108" y="11" width="251" height="55"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Duke" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yc6-yo-e2y">
+                                            <rect key="frame" x="10" y="18" width="90" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Description" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Ct1-uf-IIO">
+                                            <rect key="frame" x="108" y="74" width="251" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Cell_Description" destination="Ct1-uf-IIO" id="e0f-jD-Vkz"/>
+                                    <outlet property="Cell_Image" destination="yc6-yo-e2y" id="jd2-Wc-Tk5"/>
+                                    <outlet property="Cell_Label" destination="HFq-mv-7PT" id="ScI-UW-7vb"/>
+                                    <segue destination="3mh-tx-VR5" kind="presentation" identifier="toinformation" id="BcQ-6Y-FQL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nt6-Ca-epl" id="QZa-eT-e3u"/>
+                            <outlet property="delegate" destination="nt6-Ca-epl" id="rKa-LI-Hkv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MEM Student Directory" id="HN5-ZJ-6Mi">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="ofl-Ex-PTT">
+                            <connections>
+                                <segue destination="DtH-3h-b5z" kind="presentation" id="bVa-xL-3Xs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="SearchBar" destination="P8j-AK-CDl" id="IJP-gP-Rxn"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTk-kM-YWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4800.8000000000002" y="-49.025487256371818"/>
+        </scene>
+        <!--InfoVC-->
+        <scene sceneID="HOU-F4-fvv">
+            <objects>
+                <viewController id="3mh-tx-VR5" customClass="InfoVC" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="64Q-FU-JpT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o2Z-uj-yGB">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="MEM Student Directory" id="ilt-dc-F7H">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0hw-RG-NHu">
+                                            <connections>
+                                                <segue destination="f2C-CD-p5j" kind="unwind" unwindAction="unwindPersonListTableViewWithSegue:" id="NFK-xL-fzF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Duke" translatesAutoresizingMaskIntoConstraints="NO" id="OZ2-OY-3kf">
+                                <rect key="frame" x="59" y="76" width="256" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="Wly-QG-5MH">
+                                <rect key="frame" x="59" y="390" width="256" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="Tel" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="xgS-eP-KsC">
+                                <rect key="frame" x="59" y="475" width="256" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="Emal" text="Email" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="WzA-W7-YX5">
+                                <rect key="frame" x="59" y="543" width="256" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9xJ-i2-Vy3"/>
+                    </view>
+                    <connections>
+                        <outlet property="Info_Des" destination="xgS-eP-KsC" id="wjJ-Gg-4L2"/>
+                        <outlet property="Info_Email" destination="WzA-W7-YX5" id="H7m-fS-fxl"/>
+                        <outlet property="Info_Image" destination="OZ2-OY-3kf" id="7hS-0M-y3m"/>
+                        <outlet property="Info_Name" destination="Wly-QG-5MH" id="BJP-V0-7B3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lez-gA-74q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="f2C-CD-p5j" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3836" y="670"/>
+        </scene>
+        <!--To Do List-->
+        <scene sceneID="wNk-zt-s1G">
+            <objects>
+                <viewController id="09L-1K-axo" customClass="Button_VC" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gMX-QX-DEI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lng-nt-cLP">
+                                <rect key="frame" x="80" y="86" width="214" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="First year"/>
+                                <connections>
+                                    <action selector="Firstyear_pressed:" destination="09L-1K-axo" eventType="touchUpInside" id="eWE-KV-h2a"/>
+                                    <segue destination="3fm-Dm-8Vy" kind="presentation" identifier="Firstyearsegue" id="cFW-us-Qgw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPQ-ni-Gcv">
+                                <rect key="frame" x="80" y="365" width="214" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Graduate"/>
+                                <connections>
+                                    <action selector="Graduate_pressed:" destination="09L-1K-axo" eventType="touchUpInside" id="Gvm-f4-stB"/>
+                                    <segue destination="3fm-Dm-8Vy" kind="presentation" identifier="Graduatesegue" id="dIE-QF-Bjp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="jPu-3f-HcJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="To Do List" id="E9e-XS-upp">
+                        <barButtonItem key="leftBarButtonItem" image="return" catalog="system" id="pVJ-Gn-AoQ">
+                            <connections>
+                                <segue destination="DtH-3h-b5z" kind="presentation" id="4dr-wU-yez"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="First_year" destination="lng-nt-cLP" id="Zy4-8U-TIw"/>
+                        <outlet property="Graduate" destination="nPQ-ni-Gcv" id="ZPh-Pr-b4b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OnR-7t-cCL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2512.8000000000002" y="-893.70314842578716"/>
+        </scene>
+        <!--To Do List TableVC-->
+        <scene sceneID="Y45-Mw-nnW">
+            <objects>
+                <tableViewController id="3fm-Dm-8Vy" customClass="ToDoList_TableVC" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="137" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Rr-kl-dmh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="jfe-UQ-iyF">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="First year" id="LvU-x7-4o6">
+                                    <barButtonItem key="leftBarButtonItem" title="Item" id="7sN-ut-yWP"/>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="137" id="xhU-6X-msi" customClass="ItemCell" customModule="Duke_Masters_Program" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="137"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xhU-6X-msi" id="dNZ-yO-tI6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="137"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pI9-qd-GtL">
+                                            <rect key="frame" x="16" y="11" width="267" height="59"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNf-pX-838">
+                                            <rect key="frame" x="16" y="78" width="267" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ItemDate" destination="kNf-pX-838" id="jvy-7y-c6J"/>
+                                    <outlet property="ItemName" destination="pI9-qd-GtL" id="oTs-Uu-nxS"/>
+                                    <segue destination="Iyz-cZ-WxA" kind="presentation" identifier="Detail_segue" id="FF3-GF-DwH"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3fm-Dm-8Vy" id="6Bm-WD-DtV"/>
+                            <outlet property="delegate" destination="3fm-Dm-8Vy" id="B4P-OU-p7S"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="naU-8G-82Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3303.1999999999998" y="-894.60269865067471"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="utB-0v-QfU">
+            <objects>
+                <viewController id="Iyz-cZ-WxA" customClass="Detail_VC" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VRO-eb-kUS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3c-lF-HJ1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Description" id="Ryv-Gg-6pO">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kJi-vc-JId">
+                                            <connections>
+                                                <segue destination="Tll-vD-ThI" kind="unwind" unwindAction="unwindListTableViewWithSegue:" id="RXe-zT-Hoo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IdH-Ty-3ai">
+                                <rect key="frame" x="16" y="196" width="343" height="386"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plw-YB-uda">
+                                <rect key="frame" x="49" y="99" width="277" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wGh-bJ-qdg"/>
+                    </view>
+                    <connections>
+                        <outlet property="Description" destination="IdH-Ty-3ai" id="P4v-4e-zuB"/>
+                        <outlet property="Itemname" destination="plw-YB-uda" id="Ges-sp-7E9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XIL-yH-vXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Tll-vD-ThI" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4236" y="-895.50224887556226"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1xA-OO-kTl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O7Y-cu-Thk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fQc-dr-6f2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nt6-Ca-epl" kind="relationship" relationship="rootViewController" id="Mfk-tg-XxV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o44-t4-5qr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3861.5999999999999" y="-49.025487256371818"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8r6-Dw-XBU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dsH-Ud-5Oj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8e3-BJ-LVs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="09L-1K-axo" kind="relationship" relationship="rootViewController" id="twg-ar-dSB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPY-Z4-Fmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573.5999999999999" y="-893.70314842578716"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Duke" width="16" height="16"/>
         <image name="Fan" width="750" height="750"/>
+        <image name="return" catalog="system" width="64" height="50"/>
         <image name="sidebar.left" catalog="system" width="64" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fpn-LM-Imh"/>
+        <segue reference="QTK-wl-xZD"/>
+        <segue reference="cFW-us-Qgw"/>
+        <segue reference="4dr-wU-yez"/>
     </inferredMetricsTieBreakers>
 </document>
