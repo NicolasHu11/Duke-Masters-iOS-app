@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target 'Duke Masters Program' do
+ 
+pod 'SideMenu', '~> 6.0'
+
+# add the Firebase pod for Google Analytics
+pod 'Firebase/Analytics'
+pod 'Firebase/Messaging'
+# add pods for any other desired Firebase products
+# https://firebase.google.com/docs/ios/setup#available-pods
+
+end
