@@ -20,6 +20,10 @@
 		3F66737F2374FCF200026C63 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66737C2374FCF200026C63 /* DirectoryTableViewCell.swift */; };
 		3F6673802374FCF200026C63 /* DirectoryTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66737D2374FCF200026C63 /* DirectoryTableVC.swift */; };
 		3F6673822374FF2200026C63 /* Fall 2019 MEM Students_MStxt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3F6673812374FF2200026C63 /* Fall 2019 MEM Students_MStxt.txt */; };
+		3F790669237756F900CB87CA /* chatCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F790668237756F900CB87CA /* chatCollectionViewController.swift */; };
+		3F79066B23775F0F00CB87CA /* chatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79066A23775F0F00CB87CA /* chatTableViewController.swift */; };
+		3F79066D23775FAB00CB87CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79066C23775FAB00CB87CA /* User.swift */; };
+		3F79066F237A0DB600CB87CA /* mainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79066E237A0DB500CB87CA /* mainPageViewController.swift */; };
 		AE1691DD2362863C004C3289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1691DC2362863C004C3289 /* AppDelegate.swift */; };
 		AE1691DF2362863C004C3289 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1691DE2362863C004C3289 /* SceneDelegate.swift */; };
 		AE1691E12362863C004C3289 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1691E02362863C004C3289 /* ViewController.swift */; };
@@ -77,6 +81,10 @@
 		3F66737D2374FCF200026C63 /* DirectoryTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryTableVC.swift; sourceTree = "<group>"; };
 		3F6673812374FF2200026C63 /* Fall 2019 MEM Students_MStxt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Fall 2019 MEM Students_MStxt.txt"; sourceTree = "<group>"; };
 		3F79065F23733D8800CB87CA /* Duke Masters Program.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Duke Masters Program.entitlements"; sourceTree = "<group>"; };
+		3F790668237756F900CB87CA /* chatCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatCollectionViewController.swift; sourceTree = "<group>"; };
+		3F79066A23775F0F00CB87CA /* chatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatTableViewController.swift; sourceTree = "<group>"; };
+		3F79066C23775FAB00CB87CA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../../../../Downloads/gameofchats/gameofchats/User.swift; sourceTree = "<group>"; };
+		3F79066E237A0DB500CB87CA /* mainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageViewController.swift; sourceTree = "<group>"; };
 		78AC4158D4B58BC1F1073314 /* Pods-Duke Masters Program.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duke Masters Program.release.xcconfig"; path = "Target Support Files/Pods-Duke Masters Program/Pods-Duke Masters Program.release.xcconfig"; sourceTree = "<group>"; };
 		AE1691D92362863C004C3289 /* Duke Masters Program.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duke Masters Program.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1691DC2362863C004C3289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +174,7 @@
 				3F6673812374FF2200026C63 /* Fall 2019 MEM Students_MStxt.txt */,
 				3F66737D2374FCF200026C63 /* DirectoryTableVC.swift */,
 				3F66737C2374FCF200026C63 /* DirectoryTableViewCell.swift */,
+				3F79066C23775FAB00CB87CA /* User.swift */,
 				3F66737B2374FCF200026C63 /* InfoVC.swift */,
 				3F79065F23733D8800CB87CA /* Duke Masters Program.entitlements */,
 				AE5E04992367C56200868CCF /* RoomReservationViewController.swift */,
@@ -174,6 +183,9 @@
 				AE1691DE2362863C004C3289 /* SceneDelegate.swift */,
 				AE1691E02362863C004C3289 /* ViewController.swift */,
 				AE1691E22362863C004C3289 /* Main.storyboard */,
+				3F79066A23775F0F00CB87CA /* chatTableViewController.swift */,
+				3F790668237756F900CB87CA /* chatCollectionViewController.swift */,
+				3F79066E237A0DB500CB87CA /* mainPageViewController.swift */,
 				3F639F8723640B8C00A91A74 /* SidebarViewController.swift */,
 				AE1691E82362863E004C3289 /* Assets.xcassets */,
 				AE1691EA2362863E004C3289 /* LaunchScreen.storyboard */,
@@ -392,6 +404,7 @@
 				3F639F8823640B8C00A91A74 /* SidebarViewController.swift in Sources */,
 				AE1691E12362863C004C3289 /* ViewController.swift in Sources */,
 				AE1691E72362863C004C3289 /* Duke_Masters_Program.xcdatamodeld in Sources */,
+				3F79066B23775F0F00CB87CA /* chatTableViewController.swift in Sources */,
 				AE5E049B2367C56200868CCF /* RoomReservationViewController.swift in Sources */,
 				3F66737E2374FCF200026C63 /* InfoVC.swift in Sources */,
 				3F41D8A72375099100C36C9E /* Button_VC.swift in Sources */,
@@ -402,7 +415,10 @@
 				AE1691DD2362863C004C3289 /* AppDelegate.swift in Sources */,
 				3F41D8AC237509C000C36C9E /* ToDoList_TableVC.swift in Sources */,
 				3F41D8AA2375099100C36C9E /* Detail_VC.swift in Sources */,
+				3F79066D23775FAB00CB87CA /* User.swift in Sources */,
+				3F79066F237A0DB600CB87CA /* mainPageViewController.swift in Sources */,
 				AE1691DF2362863C004C3289 /* SceneDelegate.swift in Sources */,
+				3F790669237756F900CB87CA /* chatCollectionViewController.swift in Sources */,
 				AE5E049A2367C56200868CCF /* SafetyPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
