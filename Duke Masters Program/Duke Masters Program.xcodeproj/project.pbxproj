@@ -12,6 +12,8 @@
 		3F41D8A92375099100C36C9E /* Dataprocess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41D8A52375099100C36C9E /* Dataprocess.swift */; };
 		3F41D8AA2375099100C36C9E /* Detail_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41D8A62375099100C36C9E /* Detail_VC.swift */; };
 		3F41D8AC237509C000C36C9E /* ToDoList_TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41D8AB237509C000C36C9E /* ToDoList_TableVC.swift */; };
+		3F41D8F5237C6DBF00C36C9E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41D8F4237C6DBE00C36C9E /* User.swift */; };
+		3F41D8FD237DD69E00C36C9E /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41D8FC237DD69D00C36C9E /* ChatMessageCell.swift */; };
 		3F639F842363C60B00A91A74 /* Pods_Duke_Masters_Program.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F0567482FC64859BDADE69 /* Pods_Duke_Masters_Program.framework */; };
 		3F639F852363C60B00A91A74 /* Pods_Duke_Masters_Program.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7F0567482FC64859BDADE69 /* Pods_Duke_Masters_Program.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F639F8823640B8C00A91A74 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F639F8723640B8C00A91A74 /* SidebarViewController.swift */; };
@@ -22,7 +24,6 @@
 		3F6673822374FF2200026C63 /* Fall 2019 MEM Students_MStxt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3F6673812374FF2200026C63 /* Fall 2019 MEM Students_MStxt.txt */; };
 		3F790669237756F900CB87CA /* chatCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F790668237756F900CB87CA /* chatCollectionViewController.swift */; };
 		3F79066B23775F0F00CB87CA /* chatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79066A23775F0F00CB87CA /* chatTableViewController.swift */; };
-		3F79066D23775FAB00CB87CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79066C23775FAB00CB87CA /* User.swift */; };
 		3F79066F237A0DB600CB87CA /* mainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79066E237A0DB500CB87CA /* mainPageViewController.swift */; };
 		AE1691DD2362863C004C3289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1691DC2362863C004C3289 /* AppDelegate.swift */; };
 		AE1691DF2362863C004C3289 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1691DE2362863C004C3289 /* SceneDelegate.swift */; };
@@ -74,6 +75,8 @@
 		3F41D8A52375099100C36C9E /* Dataprocess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dataprocess.swift; sourceTree = "<group>"; };
 		3F41D8A62375099100C36C9E /* Detail_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detail_VC.swift; sourceTree = "<group>"; };
 		3F41D8AB237509C000C36C9E /* ToDoList_TableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoList_TableVC.swift; sourceTree = "<group>"; };
+		3F41D8F4237C6DBE00C36C9E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3F41D8FC237DD69D00C36C9E /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		3F639F8723640B8C00A91A74 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		3F639FA1237334BA00A91A74 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F66737B2374FCF200026C63 /* InfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
@@ -83,7 +86,6 @@
 		3F79065F23733D8800CB87CA /* Duke Masters Program.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Duke Masters Program.entitlements"; sourceTree = "<group>"; };
 		3F790668237756F900CB87CA /* chatCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatCollectionViewController.swift; sourceTree = "<group>"; };
 		3F79066A23775F0F00CB87CA /* chatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatTableViewController.swift; sourceTree = "<group>"; };
-		3F79066C23775FAB00CB87CA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../../../../Downloads/gameofchats/gameofchats/User.swift; sourceTree = "<group>"; };
 		3F79066E237A0DB500CB87CA /* mainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageViewController.swift; sourceTree = "<group>"; };
 		78AC4158D4B58BC1F1073314 /* Pods-Duke Masters Program.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duke Masters Program.release.xcconfig"; path = "Target Support Files/Pods-Duke Masters Program/Pods-Duke Masters Program.release.xcconfig"; sourceTree = "<group>"; };
 		AE1691D92362863C004C3289 /* Duke Masters Program.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duke Masters Program.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3F41D8F6237CA13500C36C9E /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				3F41D8A32375099100C36C9E /* Button_VC.swift */,
+				3F41D8A52375099100C36C9E /* Dataprocess.swift */,
+				3F41D8A62375099100C36C9E /* Detail_VC.swift */,
+				3F41D8A42375099100C36C9E /* ItemCell.swift */,
+				3F41D8AB237509C000C36C9E /* ToDoList_TableVC.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
+		3F41D8F8237CA1A800C36C9E /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				3F66737D2374FCF200026C63 /* DirectoryTableVC.swift */,
+				3F66737B2374FCF200026C63 /* InfoVC.swift */,
+				3F66737C2374FCF200026C63 /* DirectoryTableViewCell.swift */,
+				3F6673812374FF2200026C63 /* Fall 2019 MEM Students_MStxt.txt */,
+			);
+			path = Directory;
+			sourceTree = "<group>";
+		};
+		3F41D8F9237CA1F900C36C9E /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				3F79066A23775F0F00CB87CA /* chatTableViewController.swift */,
+				3F790668237756F900CB87CA /* chatCollectionViewController.swift */,
+				3F79066E237A0DB500CB87CA /* mainPageViewController.swift */,
+				3F41D8F4237C6DBE00C36C9E /* User.swift */,
+				3F41D8FC237DD69D00C36C9E /* ChatMessageCell.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		AE1691D02362863C004C3289 = {
 			isa = PBXGroup;
 			children = (
@@ -166,16 +203,9 @@
 		AE1691DB2362863C004C3289 /* Duke Masters Program */ = {
 			isa = PBXGroup;
 			children = (
-				3F41D8AB237509C000C36C9E /* ToDoList_TableVC.swift */,
-				3F41D8A32375099100C36C9E /* Button_VC.swift */,
-				3F41D8A52375099100C36C9E /* Dataprocess.swift */,
-				3F41D8A62375099100C36C9E /* Detail_VC.swift */,
-				3F41D8A42375099100C36C9E /* ItemCell.swift */,
-				3F6673812374FF2200026C63 /* Fall 2019 MEM Students_MStxt.txt */,
-				3F66737D2374FCF200026C63 /* DirectoryTableVC.swift */,
-				3F66737C2374FCF200026C63 /* DirectoryTableViewCell.swift */,
-				3F79066C23775FAB00CB87CA /* User.swift */,
-				3F66737B2374FCF200026C63 /* InfoVC.swift */,
+				3F41D8F9237CA1F900C36C9E /* Notification */,
+				3F41D8F8237CA1A800C36C9E /* Directory */,
+				3F41D8F6237CA13500C36C9E /* TodoList */,
 				3F79065F23733D8800CB87CA /* Duke Masters Program.entitlements */,
 				AE5E04992367C56200868CCF /* RoomReservationViewController.swift */,
 				AE5E04982367C56200868CCF /* SafetyPageViewController.swift */,
@@ -183,9 +213,6 @@
 				AE1691DE2362863C004C3289 /* SceneDelegate.swift */,
 				AE1691E02362863C004C3289 /* ViewController.swift */,
 				AE1691E22362863C004C3289 /* Main.storyboard */,
-				3F79066A23775F0F00CB87CA /* chatTableViewController.swift */,
-				3F790668237756F900CB87CA /* chatCollectionViewController.swift */,
-				3F79066E237A0DB500CB87CA /* mainPageViewController.swift */,
 				3F639F8723640B8C00A91A74 /* SidebarViewController.swift */,
 				AE1691E82362863E004C3289 /* Assets.xcassets */,
 				AE1691EA2362863E004C3289 /* LaunchScreen.storyboard */,
@@ -402,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F639F8823640B8C00A91A74 /* SidebarViewController.swift in Sources */,
+				3F41D8FD237DD69E00C36C9E /* ChatMessageCell.swift in Sources */,
 				AE1691E12362863C004C3289 /* ViewController.swift in Sources */,
 				AE1691E72362863C004C3289 /* Duke_Masters_Program.xcdatamodeld in Sources */,
 				3F79066B23775F0F00CB87CA /* chatTableViewController.swift in Sources */,
@@ -415,11 +443,11 @@
 				AE1691DD2362863C004C3289 /* AppDelegate.swift in Sources */,
 				3F41D8AC237509C000C36C9E /* ToDoList_TableVC.swift in Sources */,
 				3F41D8AA2375099100C36C9E /* Detail_VC.swift in Sources */,
-				3F79066D23775FAB00CB87CA /* User.swift in Sources */,
 				3F79066F237A0DB600CB87CA /* mainPageViewController.swift in Sources */,
 				AE1691DF2362863C004C3289 /* SceneDelegate.swift in Sources */,
 				3F790669237756F900CB87CA /* chatCollectionViewController.swift in Sources */,
 				AE5E049A2367C56200868CCF /* SafetyPageViewController.swift in Sources */,
+				3F41D8F5237C6DBF00C36C9E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

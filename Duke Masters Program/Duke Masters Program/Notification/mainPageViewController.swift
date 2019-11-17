@@ -61,7 +61,8 @@ class mainPageViewController: UIViewController {
             
             if error != nil {
                 let errorCode = error.unsafelyUnwrapped;
-                if (errorCode.localizedDescription == "auth/email-already-in-use") {
+                //"auth/email-already-in-use"
+                if (errorCode.localizedDescription == "The email address is already in use by another account.") {
                     self.loginUser()
                 }
                 print(error ?? "")
