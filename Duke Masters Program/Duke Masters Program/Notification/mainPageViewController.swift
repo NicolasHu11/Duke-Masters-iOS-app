@@ -17,7 +17,7 @@ class mainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        handleRegister()
+        //handleRegister()
         // Do any additional setup after loading the view.
     }
     
