@@ -79,6 +79,8 @@ class CalendarViewController: UIViewController, UITextFieldDelegate, URLSessionD
             // check to see whether there's a current logged in account.
             // If none, acquire token interactively.
             acquireTokenInteractively()
+            self.graphInit()
+            self.graphEvent()
             return
         }
         acquireTokenSilently(currentAccount)
@@ -113,6 +115,7 @@ extension CalendarViewController{
 //    }
     
     func graphInit(){
+        print("In Graph Initialization!")
         // create the authenticationProvider
         // get a MSALPublicClientApplication, here use the applicationContext
         let authProviderOptions = MSALAuthenticationProviderOptions(scopes: self.graphScope)

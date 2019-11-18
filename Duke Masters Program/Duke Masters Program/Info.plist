@@ -12,7 +12,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>msauth.edu.duke-Masters-Program</string>
+				<string>msauth.edu.duke.Duke-Masters-Program</string>
 				<string>tel</string>
 				<string>itms-apps</string>
 			</array>
