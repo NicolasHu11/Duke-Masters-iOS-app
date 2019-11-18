@@ -1,0 +1,217 @@
+Preferred First Name	Last Name	Duke Email	Admit Term	Program	MS/MENG
+Aditi	Aditi	aditi.429@duke.edu	Fall 2019	MEM	MENG
+Bhuvan	Aggarwal	bhuvan.aggarwal@duke.edu	Fall 2019	MEM	MENG
+Mazahir	Akolawala	mazahir.akolawala@duke.edu	Fall 2018	MEM	MENG
+Aditya	Akole	aditya.akole@duke.edu	Fall 2019	MEM	MENG
+Aziz	Alghanem	abdulaziz.alghanem@duke.edu	Fall 2019	MEM	MENG
+David	Alpert	david.alpert@duke.edu	Fall 2019	MEM	MENG
+Abdulaziz	Alsalman	abdulaziz.alsalman@duke.edu	Spring 2019	MEM	MENG
+Gustavo	Andrade	gustavo.andrade@duke.edu	Fall 2019	MEM	MENG
+Sumedha	Anupindi	sumedha.anupindi@duke.edu	Fall 2018	MEM	MENG
+Chahat	Arora	chahat.arora@duke.edu	Fall 2019	MEM	MENG
+Sugam	Arora	sugam.arora@duke.edu	Fall 2019	MEM	MENG
+Manpreet Singh	Aulakh	manpreetsingh.aulakh@duke.edu	Fall 2018	MEM	MENG
+Priyanka	Balaji	priyanka.balaji@duke.edu	Fall 2018	MEM	MENG
+Yash	Bansal	yashkamal.bansal@duke.edu	Fall 2019	MEM	MENG
+Jiayi	Bao	jiayi.bao370@duke.edu	Fall 2018	MEM	MENG
+Debdeep	Basu	debdeep.basu@duke.edu	Fall 2019	MEM	MENG
+William	Berger	william.berger@duke.edu	Fall 2019	MEM	MENG
+Anirudha	Bharadwaj	anirudhavedavyasamurthy.bharadwaj@duke.edu	Fall 2019	MEM	MENG
+Yusuf	Bhinderwala	yusuf.bhinderwala@duke.edu	Fall 2018	MEM	MENG
+Saransh	Bhutada	saransh.bhutada@duke.edu	Fall 2019	MEM	MENG
+Sushmita	Biswas	sushmita.biswas@duke.edu	Fall 2018	MEM	MENG
+Lakshmi Akhila	Bommaraju	lakshmiakhila.bommaraju@duke.edu	Spring 2019	MEM	MENG
+Ganimat	Brah	ganimat.brah@duke.edu	Fall 2018	MEM	MENG
+Marcus	Bullock	marcus.bullock@duke.edu	Fall 2018	MEM	MENG
+Chengxi	Cao	chengxi.cao@duke.edu	Fall 2018	MEM	MENG
+Kun	Cao	kun.cao@duke.edu	Spring 2019	MEM	MENG
+Eva	Catillon	eva.catillon@duke.edu	Fall 2019	MEM	MENG
+Shravani Milind	Challawar	shravanimilind.challawar@duke.edu	Fall 2018	MEM	MENG
+Maddhujeet	Chandra	maddhujeet.chandra@duke.edu	Fall 2018	MEM	MENG
+Pulkit	Chaudhary	pulkit.chaudhary@duke.edu	Fall 2018	MEM	MENG
+Diron	Chloe	diron.chloe@duke.edu	Fall 2019	MEM	MENG
+James	Cho	james.cho748@duke.edu	Fall 2018	MEM	MENG
+Shreya Suri	Ciryam	shreya.ciryam@duke.edu	Spring 2019	MEM	MENG
+Charles	Clinard	charles.clinard@duke.edu	Fall 2018	MEM	MENG
+Jack	Cohen	jack.cohen@duke.edu	Fall 2019	MEM	MENG
+Kanhai	Dalal	kanhai.dalal@duke.edu	Fall 2018	MEM	MENG
+Shruti	Desai	shruti.d.desai@duke.edu	Fall 2018	MEM	MENG
+Apurva	Deshmukh	apurva.deshmukh@duke.edu	Fall 2019	MEM	MENG
+Rhishabh	Deshpande	rhishabh.deshpande@duke.edu	Fall 2018	MEM	MENG
+Srushti	Deshpande	srushti.deshpande@duke.edu	Fall 2018	MEM	MENG
+Paige	Detwiler	paige.detwiler@duke.edu	Fall 2019	MEM	MENG
+Tanmay	Dhuri	tanmay.dhuri@duke.edu	Fall 2018	MEM	MENG
+Jake	Donovan	jake.donovan@duke.edu	Fall 2019	MEM	MENG
+Rishi	Doshi	rishi.doshi@duke.edu	Fall 2018	MEM	MENG
+Brendon	D'Souza	brendon.dsouza@duke.edu	Fall 2018	MEM	MENG
+Arusha	Dubey	arusha.dubey@duke.edu	Fall 2018	MEM	MENG
+Shady	Elbassiouny	shady.elbassiouny@duke.edu	Fall 2018	MEM	MENG
+Cameron	Esses	cameron.esses@duke.edu	Fall 2019	MEM	MENG
+Jingyi	Fan	jingyi.fan@duke.edu	Fall 2018	MEM	MENG
+Peng	Fan	peng.fan@duke.edu	Fall 2019	MEM	MENG
+Yiyang	Fang	yiyang.fang@duke.edu	Spring 2019	MEM	MENG
+Florencia	Fernandez Brain	florenciaraquel.fernandez.brain@duke.edu	Fall 2019	MEM	MENG
+Warren	Fischer	warren.fischer@duke.edu	Spring 2019	MEM	MENG
+Chris	Fu	sihan.fu@duke.edu	Fall 2019	MEM	MENG
+Kartik	Gandhi	kartik.gandhi@duke.edu	Fall 2019	MEM	MENG
+Yagnya Aditya	Ganti	yagnyaaditya.ganti@duke.edu	Fall 2019	MEM	MENG
+Weipeng	Gao	weipeng.gao@duke.edu	Fall 2018	MEM	MENG
+Yansen	Geng	yunshu.geng@duke.edu	Fall 2018	MEM	MENG
+Jeel	Ghughu	jeeljayesh.ghughu@duke.edu	Fall 2019	MEM	MENG
+Siddharth	Goel	siddharth.goel@duke.edu	Fall 2018	MEM	MENG
+Tushnik	Goswami	tushnik.goswami@duke.edu	Fall 2019	MEM	MENG
+Jingyi	Guan	jingyi.guan@duke.edu	Fall 2019	MEM	MENG
+Ravi Kiran	Gudipally	ravikiranreddy.gudipally@duke.edu	Fall 2019	MEM	MENG
+Shuhan	Guo	shuhan.guo@duke.edu	Fall 2019	MEM	MENG
+Amisha	Gupta	amisha.gupta@duke.edu	Fall 2019	MEM	MENG
+Bhavya	Gursahani	bhavya.gursahani@duke.edu	Fall 2019	MEM	MENG
+Yucheng	Hang	yucheng.hang@duke.edu	Fall 2019	MEM	MENG
+Saurabh	Harne	saurabh.harne@duke.edu	Fall 2018	MEM	MENG
+Xinran	He	xinran.he@duke.edu	Fall 2019	MEM	MENG
+Hanxi	Hu	hanxi.hu@duke.edu	Fall 2018	MEM	MENG
+Luman	Huang	luman.huang@duke.edu	Fall 2018	MEM	MENG
+Shiyi	Huang	shiyi.huang136@duke.edu	Fall 2019	MEM	MENG
+Zeynep	Inan	zeynep.inan@duke.edu	Fall 2019	MEM	MENG
+Alfred	Indome	alfred.indome@duke.edu	Fall 2019	MEM	MENG
+Smrithi	Jayarajan	smrithi.jayarajan@duke.edu	Fall 2018	MEM	MENG
+Sida	Jiang	sida.jiang@duke.edu	Fall 2019	MEM	MENG
+Zhouyang	Jin	zhouyang.jin@duke.edu	Spring 2019	MEM	MENG
+Ayush	Jithin	ayush.jithin@duke.edu	Fall 2019	MEM	MENG
+Akshay	Jituri	akshay.jituri@duke.edu	Fall 2018	MEM	MENG
+Jairaj	Joshi	jairaj.joshi@duke.edu	Fall 2018	MEM	MENG
+Abhishek Deepak	Kanal	abhishekdeepak.kanal@duke.edu	Fall 2018	MEM	MENG
+Jugal	Karda	jugal.karda@duke.edu	Fall 2019	MEM	MENG
+Praveen	Karthikeyan	praveen.karthikeyan@duke.edu	Fall 2018	MEM	MENG
+Mihir	Kaushik	mihir.kaushik@duke.edu	Fall 2019	MEM	MENG
+Malavika	Khatav	malavika.khatav@duke.edu	Fall 2019	MEM	MENG
+Avni	Kulkarni	avni.kulkarni@duke.edu	Fall 2019	MEM	MENG
+Aditya	Kumar	aditya.kumar443@duke.edu	Fall 2018	MEM	MENG
+Sergey	Kuznetsov	sergey.kuznetsov@duke.edu	Fall 2018	MEM	MENG
+Jiayi	Li	jiayi.li762@duke.edu	Fall 2019	MEM	MENG
+Mengyu	Li	mengyu.li@duke.edu	Fall 2019	MEM	MENG
+Roxanne	Li	runjing.li@duke.edu	Fall 2018	MEM	MENG
+William	Li	william.li@duke.edu	Spring 2019	MEM	MENG
+Xiaolu	Lin	xiaolu.lin@duke.edu	Fall 2019	MEM	MENG
+Hao	Liu	hao.liu094@duke.edu	Fall 2018	MEM	MENG
+Tianqi	Liu	tianqi.liu@duke.edu	Fall 2019	MEM	MENG
+Wenxin	Liu	wenxin.liu@duke.edu	Fall 2018	MEM	MENG
+Yuren	Liu	yuren.liu@duke.edu	Fall 2018	MEM	MENG
+Brandon	Lobo	brandon.lobo@duke.edu	Fall 2018	MEM	MENG
+Roberto	Lopez Moncayo	roberto.lopez.moncayo@duke.edu	Fall 2018	MEM	MENG
+Jinghan	Luo	jinghan.luo@duke.edu	Fall 2019	MEM	MENG
+Mokshada	Mahajan	mokshadahemant.mahajan@duke.edu	Fall 2018	MEM	MENG
+Tarunam	Mahajan	tarunam.mahajan@duke.edu	Fall 2019	MEM	MENG
+Asha	Mallapragada	ashajyoti.mallapragada@duke.edu	Fall 2019	MEM	MENG
+Vijay	Mamulpet Nanjundaiah	vijay.mamulpet.nanjundaiah@duke.edu	Fall 2018	MEM	MENG
+Shanmathi	Manoharan	shanmathi.manoharan@duke.edu	Fall 2019	MEM	MENG
+Edouard	Martin--Bourhis	edouard.martinbourhis@duke.edu	Fall 2019	MEM	MENG
+Kierna	Mason	kierna.mason@duke.edu	Fall 2019	MEM	MENG
+Priyank	Mishra	priyank.mishra@duke.edu	Fall 2018	MEM	MENG
+Aparna	Mohan	aparna.mohan@duke.edu	Fall 2018	MEM	MENG
+Kyle	Morris	kyle.morris@duke.edu	Fall 2019	MEM	MENG
+Subhabrata	Mukherjee	subhabrata.mukherjee@duke.edu	Fall 2018	MEM	MENG
+Arunachalam	Muthiah	arunachalam.muthiah@duke.edu	Fall 2018	MEM	MENG
+Govardhan	Nadendla	goverdhan.nadendla@duke.edu	Fall 2019	MEM	MENG
+Christopher	Nestor	christopher.nestor@duke.edu	Fall 2019	MEM	MENG
+Travis	Nicks	travis.nicks@duke.edu	Spring 2019	MEM	MENG
+Michelle	Oteiza	michelle.oteiza@duke.edu	Fall 2019	MEM	MENG
+Josh	Owsiany	joshua.owsiany@duke.edu	Fall 2019	MEM	MENG
+Nithin	Palle	nithinreddy.palle@duke.edu	Fall 2018	MEM	MENG
+Ryan	Pan	yingan.pan@duke.edu	Fall 2018	MEM	MENG
+Paras	Pandey	paras.pandey@duke.edu	Spring 2019	MEM	MENG
+Prateek	Parashar	prateek.parashar@duke.edu	Fall 2018	MEM	MENG
+Darshit	Parekh	darshit.parekh@duke.edu	Fall 2018	MEM	MENG
+Amy	Park	hyojae.park@duke.edu	Fall 2018	MEM	MENG
+Jaime	Passuni Cordova	jaime.passuni.cordova@duke.edu	Fall 2019	MEM	MENG
+Aashit	Patel	aashitmehulbhai.patel@duke.edu	Fall 2018	MEM	MENG
+Jay	Patel	jay.patel243@duke.edu	Fall 2018	MEM	MENG
+Shantanu	Patel	shantanu.patel@duke.edu	Fall 2018	MEM	MENG
+Tejas	Patel	tejas.patel@duke.edu	Fall 2019	MEM	MENG
+Yatri	Patel	yatri.patel@duke.edu	Fall 2018	MEM	MENG
+Kartik Atul	Pathak	kartikatul.pathak@duke.edu	Fall 2019	MEM	MENG
+Shengyu	Peng	shengyu.peng@duke.edu	Fall 2019	MEM	MENG
+Vignesh	Pillai	vignesh.pillai@duke.edu	Fall 2019	MEM	MENG
+Kaivalya	Powale	kaivalya.powale@duke.edu	Fall 2018	MEM	MENG
+Meshach Abraham	Prabhakar	meshachabraham.prabhakar@duke.edu	Fall 2018	MEM	MENG
+Likun	Qian	likun.qian@duke.edu	Fall 2018	MEM	MENG
+Prasanna Malavika	Rajagopalan	prasannamalavika.rajagopalan@duke.edu	Fall 2018	MEM	MENG
+Varsha	Rajan	varsha.rajan@duke.edu	Fall 2019	MEM	MENG
+Snigdha	Ranjan	snigdha.ranjan@duke.edu	Fall 2018	MEM	MENG
+Yuthpati	Rathi	yuthpati.rathi@duke.edu	Fall 2018	MEM	MENG
+Nitin chowdary	Ravi	nitinchowdary.ravi@duke.edu	Fall 2019	MEM	MENG
+Shyam Krishna	Ravi	shyamkrishna.ravi@duke.edu	Fall 2019	MEM	MENG
+Ramitha	Ravishankar	ramitha.ravishankar@duke.edu	Fall 2018	MEM	MENG
+Qingyuan	Ren	qingyuan.ren@duke.edu	Fall 2018	MEM	MENG
+Sirong	Ren	sirong.ren@duke.edu	Fall 2019	MEM	MENG
+Jintae	Rhee	jintae.rhee@duke.edu	Fall 2019	MEM	MENG
+Tejas	Saberwal	tejas.saberwal@duke.edu	Fall 2018	MEM	MENG
+Kinjal	Sanghvi	kinjal.sanghvi@duke.edu	Fall 2018	MEM	MENG
+Akriti	Sanvi	akriti.sanvi@duke.edu	Fall 2018	MEM	MENG
+Abhishek	Sathe	abhishek.sathe@duke.edu	Fall 2019	MEM	MENG
+Paris	Scott	paris.scott@duke.edu	Fall 2019	MEM	MENG
+Sagar	Sen	sagarprobal.sen@duke.edu	Fall 2019	MEM	MENG
+Karthikeyan	Shanmuganathan	karthikeyan.shanmuganathan@duke.edu	Fall 2019	MEM	MENG
+Kanika	Sharma	kanika.sharma@duke.edu	Fall 2018	MEM	MENG
+Shagun	Sharma	shagun.sharma@duke.edu	Spring 2019	MEM	MENG
+Soumya	Sharma	soumya.sharma@duke.edu	Fall 2019	MEM	MENG
+Vardayini	Sharma	vardayini.sharma@duke.edu	Fall 2018	MEM	MENG
+Xinchen	Shen	xinchen.shen@duke.edu	Fall 2018	MEM	MENG
+Atharva	Sheth	atharva.sheth@duke.edu	Fall 2018	MEM	MENG
+Yi	Shi	yi.shi11@duke.edu	Fall 2018	MEM	MENG
+Nabeel	Siddiqui	mohammadnabeel.siddiqui@duke.edu	Fall 2019	MEM	MENG
+Aakash	Sotta	aakash.sotta@duke.edu	Fall 2018	MEM	MENG
+Akhil	Sreekumar Nair	akhil.sreekumar.nair@duke.edu	Fall 2018	MEM	MENG
+Vidhatri	Subramanyam Bengaluru	vidhatri.subramanyam.bengaluru@duke.edu	Fall 2018	MEM	MENG
+Michael	Sun	chenyou.sun@duke.edu	Fall 2018	MEM	MENG
+Shreenishkala	Sundar Raman	shreenishkala.sundararaman@duke.edu	Fall 2019	MEM	MENG
+Nandagopal	Suresh	nandagopal.suresh@duke.edu	Fall 2019	MEM	MENG
+Pradeep Kumar	Tamilmani	pradeepkumar.tamilmani@duke.edu	Fall 2018	MEM	MENG
+Yizhe	Tang	yizhe.tang@duke.edu	Spring 2019	MEM	MENG
+Danielle	Taylor	danielle.taylor@duke.edu	Fall 2018	MEM	MENG
+Jinghan	Tian	jinghan.tian@duke.edu	Fall 2018	MEM	MENG
+Vikeshi	Tiwari	vikeshi.tiwari@duke.edu	Fall 2019	MEM	MENG
+Hari	Unnikrishnan	harishankar.unnikrishnan@duke.edu	Fall 2018	MEM	MENG
+Shubham	Upasani	shubhamchandrashekhar.upasani@duke.edu	Fall 2019	MEM	MENG
+Nimrah	Usmani	nimrah.usmani@duke.edu	Fall 2018	MEM	MENG
+Aakash	Vaghani	aakashprakash.vaghani@duke.edu	Fall 2019	MEM	MENG
+Mrunal	Vaidya	mrunal.vaidya@duke.edu	Fall 2019	MEM	MENG
+Rishab	Venkataraman	rishab.venkataraman@duke.edu	Fall 2019	MEM	MENG
+Veenah	Venugopal	veenah.venugopal@duke.edu	Fall 2018	MEM	MENG
+Jasmine	Verma	jasmine.verma@duke.edu	Fall 2019	MEM	MENG
+Kartikeya	Verma	kartikeya.verma@duke.edu	Fall 2019	MEM	MENG
+Sushobhan	Verma	sushobhan.verma@duke.edu	Fall 2019	MEM	MENG
+Pooja	Virwani	pooja.virwani@duke.edu	Fall 2018	MEM	MENG
+Kunwar Sahib Singh	Vohra	kunwarsahibsingh.vohra@duke.edu	Fall 2019	MEM	MENG
+Honghao	Wang	honghao.wang@duke.edu	Fall 2019	MEM	MENG
+Sihan	Wang	sihan.wang@duke.edu	Fall 2018	MEM	MENG
+Yufei	Wang	yufei.wang@duke.edu	Fall 2018	MEM	MENG
+Yujie	Wang	yujie.wang637@duke.edu	Fall 2019	MEM	MENG
+Hanyue	Wei	hanyue.wei@duke.edu	Fall 2018	MEM	MENG
+Yuan	Wei	yuan.wei989@duke.edu	Fall 2018	MEM	MENG
+Ting	Wen	ting.wen@duke.edu	Fall 2019	MEM	MENG
+Xiaoyu	Wu	xiaoyu.wu@duke.edu	Fall 2018	MEM	MENG
+Zixuan	Xiao	zixuan.xiao215@duke.edu	Fall 2019	MEM	MENG
+Kayako	Yamakoshi	kayako.yamakoshi@duke.edu	Fall 2019	MEM	MENG
+Dongxin	Yan	dongxin.yan@duke.edu	Fall 2019	MEM	MENG
+Yidi	Yang	yidi.yang@duke.edu	Fall 2019	MEM	MENG
+Shengyi	Yao	shengyi.yao@duke.edu	Fall 2019	MEM	MENG
+Anisha Ramakrishna	Yarlapati	anisharamakrishna.yarlapati@duke.edu	Fall 2018	MEM	MENG
+Anoop	Yelisetty	anoop.yelisetty@duke.edu	Fall 2018	MEM	MENG
+Weijie	Yi	weijie.yi@duke.edu	Fall 2019	MEM	MENG
+Shirley	Yu	wanjing.yu@duke.edu	Fall 2019	MEM	MENG
+Wei	Yuan	wei.yuan@duke.edu	Fall 2018	MEM	MENG
+Gary	Zhang	xinyi.zhang389@duke.edu	Fall 2018	MEM	MENG
+Kevin	Zhang	yuansheng.zhang@duke.edu	Fall 2019	MEM	MENG
+Lillian	Zhang	jieyu.zhang535@duke.edu	Fall 2018	MEM	MENG
+Simeng	Zhang	simeng.zhang@duke.edu	Fall 2019	MEM	MENG
+Xuechen	Zhang	xuechen.zhang@duke.edu	Fall 2019	MEM	MENG
+Yifei	Zhang	yifei.zhang573@duke.edu	Fall 2019	MEM	MENG
+Chenxi	Zhao	chenxi.zhao@duke.edu	Fall 2019	MEM	MENG
+Haohong	Zhao	haohong.zhao@duke.edu	Fall 2019	MEM	MENG
+Yunxi	Zhao	yunxi.zhao@duke.edu	Fall 2018	MEM	MENG
+Jiaming	Zhou	jiaming.zhou@duke.edu	Fall 2018	MEM	MENG
+Nicholas	Zhou	yanquan.zhou@duke.edu	Fall 2018	MEM	MENG
+Di	Zhu	di.zhu566@duke.edu	Fall 2018	MEM	MENG
+Dongzhu	Zhu	dongzhu.zhu@duke.edu	Fall 2019	MEM	MENG
+Mengting	Zhu	mengting.zhu@duke.edu	Fall 2019	MEM	MENG
+Poppy	Zou	shanru.zou@duke.edu	Fall 2018	MEM	MENG
