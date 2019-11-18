@@ -15,4 +15,13 @@ pod 'Firebase/Storage'
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods
 
+# add MSAL(Microsoft Authentication Library) for iOS
+pod 'MSAL'
+
+
+# add Microsoft Graph SDK
+pod 'MSGraphClientSDK'
+pod 'MSGraphMSALAuthProvider'
+pod 'MSGraphClientModels'
+
 end

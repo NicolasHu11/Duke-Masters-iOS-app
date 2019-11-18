@@ -25,6 +25,8 @@
 		3F790669237756F900CB87CA /* chatCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F790668237756F900CB87CA /* chatCollectionViewController.swift */; };
 		3F79066B23775F0F00CB87CA /* chatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79066A23775F0F00CB87CA /* chatTableViewController.swift */; };
 		3F79066F237A0DB600CB87CA /* mainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79066E237A0DB500CB87CA /* mainPageViewController.swift */; };
+		3FE59F9C2382347F00133B26 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE59F9B2382347F00133B26 /* CalendarViewController.swift */; };
+		3FE59F9E2382351000133B26 /* CalenderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE59F9D2382351000133B26 /* CalenderDataModel.swift */; };
 		3FE7E8E723821F5000E34A28 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E8E623821F5000E34A28 /* WebViewController.swift */; };
 		3FE7E8E923821F7800E34A28 /* WebViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E8E823821F7800E34A28 /* WebViewUtils.swift */; };
 		AE1691DD2362863C004C3289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1691DC2362863C004C3289 /* AppDelegate.swift */; };
@@ -89,6 +91,8 @@
 		3F790668237756F900CB87CA /* chatCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatCollectionViewController.swift; sourceTree = "<group>"; };
 		3F79066A23775F0F00CB87CA /* chatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatTableViewController.swift; sourceTree = "<group>"; };
 		3F79066E237A0DB500CB87CA /* mainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageViewController.swift; sourceTree = "<group>"; };
+		3FE59F9B2382347F00133B26 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3FE59F9D2382351000133B26 /* CalenderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderDataModel.swift; sourceTree = "<group>"; };
 		3FE7E8E623821F5000E34A28 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		3FE7E8E823821F7800E34A28 /* WebViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewUtils.swift; sourceTree = "<group>"; };
 		78AC4158D4B58BC1F1073314 /* Pods-Duke Masters Program.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duke Masters Program.release.xcconfig"; path = "Target Support Files/Pods-Duke Masters Program/Pods-Duke Masters Program.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +186,24 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		3FE59F9923822FAC00133B26 /* Outlook Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				3FE59F9B2382347F00133B26 /* CalendarViewController.swift */,
+				3FE59F9D2382351000133B26 /* CalenderDataModel.swift */,
+			);
+			path = "Outlook Calendar";
+			sourceTree = "<group>";
+		};
+		3FE59F9A23822FB800133B26 /* WebViewLogin */ = {
+			isa = PBXGroup;
+			children = (
+				3FE7E8E623821F5000E34A28 /* WebViewController.swift */,
+				3FE7E8E823821F7800E34A28 /* WebViewUtils.swift */,
+			);
+			path = WebViewLogin;
+			sourceTree = "<group>";
+		};
 		AE1691D02362863C004C3289 = {
 			isa = PBXGroup;
 			children = (
@@ -213,12 +235,12 @@
 				3F79065F23733D8800CB87CA /* Duke Masters Program.entitlements */,
 				AE5E04992367C56200868CCF /* RoomReservationViewController.swift */,
 				AE5E04982367C56200868CCF /* SafetyPageViewController.swift */,
+				3FE59F9923822FAC00133B26 /* Outlook Calendar */,
 				AE1691DC2362863C004C3289 /* AppDelegate.swift */,
+				3FE59F9A23822FB800133B26 /* WebViewLogin */,
 				AE1691DE2362863C004C3289 /* SceneDelegate.swift */,
 				AE1691E02362863C004C3289 /* ViewController.swift */,
 				AE1691E22362863C004C3289 /* Main.storyboard */,
-				3FE7E8E623821F5000E34A28 /* WebViewController.swift */,
-				3FE7E8E823821F7800E34A28 /* WebViewUtils.swift */,
 				3F639F8723640B8C00A91A74 /* SidebarViewController.swift */,
 				AE1691E82362863E004C3289 /* Assets.xcassets */,
 				AE1691EA2362863E004C3289 /* LaunchScreen.storyboard */,
@@ -438,6 +460,7 @@
 				3F41D8FD237DD69E00C36C9E /* ChatMessageCell.swift in Sources */,
 				AE1691E12362863C004C3289 /* ViewController.swift in Sources */,
 				AE1691E72362863C004C3289 /* Duke_Masters_Program.xcdatamodeld in Sources */,
+				3FE59F9C2382347F00133B26 /* CalendarViewController.swift in Sources */,
 				3FE7E8E723821F5000E34A28 /* WebViewController.swift in Sources */,
 				3F79066B23775F0F00CB87CA /* chatTableViewController.swift in Sources */,
 				AE5E049B2367C56200868CCF /* RoomReservationViewController.swift in Sources */,
@@ -452,6 +475,7 @@
 				3F41D8AC237509C000C36C9E /* ToDoList_TableVC.swift in Sources */,
 				3F41D8AA2375099100C36C9E /* Detail_VC.swift in Sources */,
 				3F79066F237A0DB600CB87CA /* mainPageViewController.swift in Sources */,
+				3FE59F9E2382351000133B26 /* CalenderDataModel.swift in Sources */,
 				AE1691DF2362863C004C3289 /* SceneDelegate.swift in Sources */,
 				3F790669237756F900CB87CA /* chatCollectionViewController.swift in Sources */,
 				AE5E049A2367C56200868CCF /* SafetyPageViewController.swift in Sources */,

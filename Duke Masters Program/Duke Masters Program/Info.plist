@@ -12,6 +12,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>msauth.edu.duke-Masters-Program</string>
 				<string>tel</string>
 				<string>itms-apps</string>
 			</array>
@@ -19,6 +20,9 @@
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>msauth</string>
+		<string>msauthv2</string>
+		<string>msauthv3</string>
 		<string>livesafeapp</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
@@ -26,7 +30,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<string>edu.duke.Duke-Masters-Program</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
