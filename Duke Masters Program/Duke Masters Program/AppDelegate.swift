@@ -16,8 +16,12 @@ import FirebaseMessaging
 
 import MSAL
 
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate{
+    
+    var window: UIWindow? // for login
 
     // The callback to handle data message received via FCM for devices running iOS 10 or above.
     func applicationReceivedRemoteMessage(_ remoteMessage: MessagingRemoteMessage) {
@@ -26,6 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // below is for login   -Nicolas
+        Switcher.updateRootVC()
+        
+
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
             UNUserNotificationCenter.current().delegate = self

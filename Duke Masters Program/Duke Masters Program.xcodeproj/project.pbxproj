@@ -29,6 +29,7 @@
 		3FE59F9E2382351000133B26 /* CalenderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE59F9D2382351000133B26 /* CalenderDataModel.swift */; };
 		3FE7E8E723821F5000E34A28 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E8E623821F5000E34A28 /* WebViewController.swift */; };
 		3FE7E8E923821F7800E34A28 /* WebViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E8E823821F7800E34A28 /* WebViewUtils.swift */; };
+		3FF649332384F443000F9D0E /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF649322384F443000F9D0E /* Switcher.swift */; };
 		AE1691DD2362863C004C3289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1691DC2362863C004C3289 /* AppDelegate.swift */; };
 		AE1691DF2362863C004C3289 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1691DE2362863C004C3289 /* SceneDelegate.swift */; };
 		AE1691E12362863C004C3289 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1691E02362863C004C3289 /* ViewController.swift */; };
@@ -95,6 +96,7 @@
 		3FE59F9D2382351000133B26 /* CalenderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderDataModel.swift; sourceTree = "<group>"; };
 		3FE7E8E623821F5000E34A28 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		3FE7E8E823821F7800E34A28 /* WebViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewUtils.swift; sourceTree = "<group>"; };
+		3FF649322384F443000F9D0E /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		78AC4158D4B58BC1F1073314 /* Pods-Duke Masters Program.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duke Masters Program.release.xcconfig"; path = "Target Support Files/Pods-Duke Masters Program/Pods-Duke Masters Program.release.xcconfig"; sourceTree = "<group>"; };
 		AE1691D92362863C004C3289 /* Duke Masters Program.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duke Masters Program.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1691DC2362863C004C3289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				3FE7E8E623821F5000E34A28 /* WebViewController.swift */,
 				3FE7E8E823821F7800E34A28 /* WebViewUtils.swift */,
+				3FF649322384F443000F9D0E /* Switcher.swift */,
 			);
 			path = WebViewLogin;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				3FE7E8E923821F7800E34A28 /* WebViewUtils.swift in Sources */,
 				3F66737F2374FCF200026C63 /* DirectoryTableViewCell.swift in Sources */,
 				3F41D8A82375099100C36C9E /* ItemCell.swift in Sources */,
+				3FF649332384F443000F9D0E /* Switcher.swift in Sources */,
 				AE1691DD2362863C004C3289 /* AppDelegate.swift in Sources */,
 				3F41D8AC237509C000C36C9E /* ToDoList_TableVC.swift in Sources */,
 				3F41D8AA2375099100C36C9E /* Detail_VC.swift in Sources */,
