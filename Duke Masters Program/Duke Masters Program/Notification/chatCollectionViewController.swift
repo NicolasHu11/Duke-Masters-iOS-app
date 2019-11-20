@@ -17,6 +17,7 @@ var Username = ""
 var Useremails = ""
 var Messageuser = ""
 class chatCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
+    //var keyBoardNeedLayout: Bool = true
     var users = [User]()
     lazy var inputTextField: UITextField = {
         let textField = UITextField()
@@ -35,6 +36,9 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
         
         fetchUser()
         setupInputComponents()
+        
+        setupKeyboardObservers()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,6 +47,34 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
 
         // Do any additional setup after loading the view.
     }
+    //MARK: textfield moving when using keyboard
+    func setupKeyboardObservers() {
+           NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+           
+           NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+       }
+       @objc func handleKeyboardWillShow(_ notification: Notification) {
+           let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
+           let keyboardDuration = (notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
+           
+           containerViewBottomAnchor?.constant = -keyboardFrame!.height
+           UIView.animate(withDuration: keyboardDuration!, animations: {
+               self.view.layoutIfNeeded()
+           })
+       }
+       
+       @objc func handleKeyboardWillHide(_ notification: Notification) {
+           let keyboardDuration = (notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
+           
+           containerViewBottomAnchor?.constant = 0
+           UIView.animate(withDuration: keyboardDuration!, animations: {
+               self.view.layoutIfNeeded()
+           })
+       }
+       
+    
+  
+    //--------
     func prepare(){
         collectionView?.alwaysBounceVertical = true
         collectionView?.backgroundColor = UIColor.white
@@ -52,6 +84,7 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
         collectionView?.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         collectionView?.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
     }
+    var containerViewBottomAnchor: NSLayoutConstraint?
     func setupInputComponents() {
            let containerView = UIView()
            containerView.translatesAutoresizingMaskIntoConstraints = false
@@ -61,7 +94,8 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
            //ios9 constraint anchors
            //x,y,w,h
            containerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-           containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+           containerViewBottomAnchor = containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            containerViewBottomAnchor?.isActive = true
            containerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
            containerView.heightAnchor.constraint(equalToConstant: 50).isActive = true
            
@@ -152,6 +186,7 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
         childRef.updateChildValues(values)
         // finish upload
         print("Finish send: handle send")
+        inputTextField.text! = ""
         self.collectionView.reloadData()
        
     }
