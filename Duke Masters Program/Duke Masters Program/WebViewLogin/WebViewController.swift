@@ -186,7 +186,17 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
 //            print("ℹ️ debug: session cookies are, ", HTTPCookieStorage.shared.cookies!)
             
             self.dismiss(animated: true, completion: {
+                // here we login succssfully
                 self.performSegue(withIdentifier: "webviewToHome", sender: self)
+                // dismiss the view controller?
+                // or change the segue setting, if this does not work.
+//                self.dismiss(animated: false, completion: nil)
+                // this did not work. it dismissed the new
+                
+                
+                // update root VC
+                UserDefaults.standard.set(true, forKey: "status")
+                Switcher.updateRootVC()
                 
             })
         }

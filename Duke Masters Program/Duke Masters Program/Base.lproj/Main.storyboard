@@ -11,9 +11,9 @@
         <!--Main Page View Controller-->
         <scene sceneID="wOS-fh-MWd">
             <objects>
-                <viewController id="Sic-tb-dVI" customClass="mainPageViewController" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sic-tb-dVI" customClass="mainPageViewController" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UVR-4I-NHM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duke Master" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucs-Mf-HBA">
@@ -809,7 +809,7 @@
         <!--Web View Controller-->
         <scene sceneID="2Md-x3-DqE">
             <objects>
-                <viewController id="Zuz-zd-o9f" customClass="WebViewController" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zuz-zd-o9f" customClass="WebViewController" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b2f-By-IcR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -817,7 +817,7 @@
                         <viewLayoutGuide key="safeArea" id="tHW-fx-tYR"/>
                     </view>
                     <connections>
-                        <segue destination="Sic-tb-dVI" kind="presentation" identifier="webviewToHome" modalPresentationStyle="automatic" id="a1Q-Xl-1cq"/>
+                        <segue destination="Sic-tb-dVI" kind="presentation" identifier="webviewToHome" modalPresentationStyle="fullScreen" id="a1Q-Xl-1cq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6h-ue-6hV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
