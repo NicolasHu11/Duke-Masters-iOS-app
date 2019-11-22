@@ -88,11 +88,12 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
         // load url from string
         webView.loadString(sakaiString)
         
+        // DELETING to avoid using the same cookies
         // use the shared cookies
-        let session = URLSession.shared
-        session.configuration.httpCookieStorage = HTTPCookieStorage.shared
-        session.configuration.httpCookieAcceptPolicy = .always
-        session.configuration.httpShouldSetCookies = true
+//        let session = URLSession.shared
+//        session.configuration.httpCookieStorage = HTTPCookieStorage.shared
+//        session.configuration.httpCookieAcceptPolicy = .always
+//        session.configuration.httpShouldSetCookies = true
         
 //        // check cookies
 //        var cookies = readCookie(forURL: myURL!)
@@ -176,6 +177,9 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
         
         // set cookies, only need to do this once
         if url.absoluteString == sakaiPortalString {
+            // reset cookies. 
+            deleteCookies(forURL: url)
+            
             // only save cookies when the site == portal, should be only one time
             WKWebsiteDataStore.default().httpCookieStore.getAllCookies {
                 (cookies) in for cookie in cookies {
