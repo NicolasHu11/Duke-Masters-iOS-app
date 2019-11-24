@@ -876,12 +876,20 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Notification" id="XzH-Uy-HAQ">
+                        <barButtonItem key="leftBarButtonItem" title="show student message" id="euU-7Y-Tsw">
+                            <connections>
+                                <action selector="clickAction:" destination="OIa-RV-WA7" id="yKr-bb-136"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.clockwise" catalog="system" id="gqb-O4-OPm">
                             <connections>
-                                <action selector="Refresh:" destination="OIa-RV-WA7" id="J00-Yq-ih6"/>
+                                <action selector="clickReload:" destination="OIa-RV-WA7" id="oZK-SW-1gd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="controlFlag" destination="euU-7Y-Tsw" id="dIA-Nd-Q9l"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fU6-HC-rTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
