@@ -10,13 +10,13 @@
         <!--Main Page View Controller-->
         <scene sceneID="wOS-fh-MWd">
             <objects>
-                <viewController id="Sic-tb-dVI" customClass="mainPageViewController" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePageVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sic-tb-dVI" customClass="mainPageViewController" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFit" id="UVR-4I-NHM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mm3-Tt-Z7p">
-                                <rect key="frame" x="0.0" y="0.0" width="375.00000000000011" height="647.00000000000023"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OK6-20-T3o">
                                 <rect key="frame" x="62.5" y="237" width="250" height="100"/>
@@ -339,6 +339,11 @@
                         <viewLayoutGuide key="safeArea" id="nPg-9o-CMa"/>
                     </view>
                     <navigationItem key="navigationItem" id="G8K-gt-fU9"/>
+                    <connections>
+                        <outlet property="sideEmail" destination="UR3-5e-R88" id="NcH-Uk-lRN"/>
+                        <outlet property="sideName" destination="Qwa-ud-cxJ" id="SDF-Af-XnB"/>
+                        <outlet property="sideNetID" destination="ahk-2H-uEo" id="R84-7M-Gdi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQG-Fr-5na" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -921,7 +926,7 @@
         <!--Web View Controller-->
         <scene sceneID="2Md-x3-DqE">
             <objects>
-                <viewController id="Zuz-zd-o9f" customClass="WebViewController" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zuz-zd-o9f" customClass="WebViewController" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b2f-By-IcR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1061,7 +1066,7 @@
         <image name="sidebar.left" catalog="system" width="64" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sTN-li-zM9"/>
+        <segue reference="QTK-wl-xZD"/>
         <segue reference="cFW-us-Qgw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,7 +21,7 @@ class Switcher {
         
 
         if(status == true){
-            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homePage") as! mainPageViewController
+            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homePageVC") as! mainPageViewController
         }else{
             rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "webLogin") as! WebViewController
         }
