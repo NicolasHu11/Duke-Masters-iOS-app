@@ -10,13 +10,29 @@ import UIKit
 
 class SidebarViewController: UIViewController {
    // let page = UIView(frame: self.view.bounds)
+    @IBOutlet weak var sideName: UILabel!
+    @IBOutlet weak var sideNetID: UILabel!
+    @IBOutlet weak var sideEmail: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateFields()
        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"bg3.png")!)
         // Do any additional setup after loading the view.
     }
     
+    func updateFields() {
+        if userNetId != "" {
+            sideNetID.text = userNetId
+        }
+        if userName != ""{
+            sideName.text = userName
+        }
+        if userEmail != ""{
+            sideEmail.text = userEmail
+        }
+    }
 
     /*
     // MARK: - Navigation
