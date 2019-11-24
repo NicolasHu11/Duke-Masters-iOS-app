@@ -30,6 +30,8 @@ class CalendarViewController: UIViewController, UITextFieldDelegate, URLSessionD
     var client: MSHTTPClient?
     var graphevents: [MSGraphEvent] = []
     
+    //Maybe need to be used later
+    
     // for testing posting event
     @IBOutlet weak var testStart: UITextField!
     @IBOutlet weak var testEnd: UITextField!
@@ -50,6 +52,16 @@ class CalendarViewController: UIViewController, UITextFieldDelegate, URLSessionD
         self.createEvent()
     }
     
+    @IBAction func GetUserCalendars(_ sender: Any) {
+        self.getUserCalendars()
+    }
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,6 +76,10 @@ class CalendarViewController: UIViewController, UITextFieldDelegate, URLSessionD
             self.updateLogging(text: "Unable to create Application context \(error)")
             print("initMSAL error")
         }
+        
+        print(assignments)
+        
+        
         
     }
     
@@ -110,9 +126,6 @@ extension CalendarViewController{
         self.webViewParamaters = MSALWebviewParameters(parentViewController: self)
     }
     
-//    func initWebParams(){
-//        self.webViewParamaters = MSALWebviewParameters(parentViewController: self)
-//    }
     
     func graphInit(){
         print("In Graph Initialization!")
@@ -231,34 +244,6 @@ extension CalendarViewController{
                     }
                 }
             }
-//            var eventArray: [MSGraphEvent] = []
-//            // deserialize the back data to see
-//            do {
-//                print("Deserializing!")
-//                // Deserialize response as events collection
-//
-//                let eventsCollection = try MSCollection(data: backData)
-//
-//                eventsCollection.value.forEach({
-//                    (rawEvent: Any) in
-//                    // Convert JSON to a dictionary
-//                    guard let eventDict = rawEvent as? [String: Any] else {
-//                        return
-//                    }
-//                    // Deserialize event from the dictionary
-//                    let event = MSGraphEvent(dictionary: eventDict)!
-//                    eventArray.append(event)
-//                })
-//            } catch {
-//                //completion(nil, error)
-//            }
-            
-            //print to verify
-//            print("successfully sent " + "\(eventArray.count)" + " events to the outlook calendar!")
-//            for event in eventArray{
-//                print("\(event.start!.dateTime)")
-//                print(event.subject!)
-//            }
         })
         dataTask?.execute()
     }
@@ -453,5 +438,36 @@ extension CalendarViewController{
 }
 
 
-
-
+extension CalendarViewController{
+    // Get calendars for current user
+    func getUserCalendars(){
+        
+        print("Trying to get current user's calendars")
+        
+        let getCalendarsRequest = NSMutableURLRequest(url: URL(string: "\(MSGraphBaseURL)/me/calendars")!)
+        getCalendarsRequest.httpMethod = "GET"
+        
+        let getCalendarsDataTask = MSURLSessionDataTask(request: getCalendarsRequest, client: self.client, completion: {
+                (data: Data?, response: URLResponse?, graphError: Error?) in
+//            guard let calendarData = try? JSONSerialization.jsonObject(with: data!, options: []) else{
+//                           print("Couldn't deserialize result JSON")
+//                           return
+//                       }
+            guard let calendarData = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String : Any] else{
+                print("Couldn't deserialize result JSON")
+                return
+            }
+            //print(calendarData["@odata.context"]!)
+            //print(calendarData["value"] ?? "Doesn't work!")
+            let value = calendarData["value"] as! [[String: Any]]
+            print(value.count)
+            print(value[1]["name"] ?? "doesn't work!!!")
+            
+            print("Successfully got current user's calendars")
+        })
+    
+        // Execute the request
+        getCalendarsDataTask?.execute()
+    
+    }
+}
