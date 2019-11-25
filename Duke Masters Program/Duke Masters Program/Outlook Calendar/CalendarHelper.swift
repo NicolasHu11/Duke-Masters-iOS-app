@@ -21,7 +21,7 @@ let monthLiteral = [1:"January",
                     10:"October",
                     11: "November",
                     12:"December"]
-
+let weekdayLiteral = [1:"Mon.", 2:"Tues.", 3:"Wed.", 4:"Thur.", 5:"Fri.", 6:"Sat.", 7:"Sun."]
 
 // For a given date, return which weekday it is
 // Sun: 0   Mon: 1  Tue: 2  Wen: 3  Thu: 4  Fri: 5  Sat: 6
