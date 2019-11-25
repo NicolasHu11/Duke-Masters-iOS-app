@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F24DB15238B7CF500A641EA /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24DB10238B7CF400A641EA /* CalendarCollectionViewCell.swift */; };
+		3F24DB16238B7CF500A641EA /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24DB11238B7CF400A641EA /* CalendarHelper.swift */; };
+		3F24DB17238B7CF500A641EA /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24DB12238B7CF500A641EA /* EventCollectionViewCell.swift */; };
+		3F24DB18238B7CF500A641EA /* CalendarDisp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24DB13238B7CF500A641EA /* CalendarDisp.swift */; };
+		3F24DB19238B7CF500A641EA /* outlookCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24DB14238B7CF500A641EA /* outlookCommunication.swift */; };
 		3F41D8A72375099100C36C9E /* Button_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41D8A32375099100C36C9E /* Button_VC.swift */; };
 		3F41D8A82375099100C36C9E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41D8A42375099100C36C9E /* ItemCell.swift */; };
 		3F41D8A92375099100C36C9E /* Dataprocess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41D8A52375099100C36C9E /* Dataprocess.swift */; };
@@ -25,7 +30,6 @@
 		3F790669237756F900CB87CA /* chatCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F790668237756F900CB87CA /* chatCollectionViewController.swift */; };
 		3F79066B23775F0F00CB87CA /* chatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79066A23775F0F00CB87CA /* chatTableViewController.swift */; };
 		3F79066F237A0DB600CB87CA /* mainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79066E237A0DB500CB87CA /* mainPageViewController.swift */; };
-		3FE59F9C2382347F00133B26 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE59F9B2382347F00133B26 /* CalendarViewController.swift */; };
 		3FE59F9E2382351000133B26 /* CalenderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE59F9D2382351000133B26 /* CalenderDataModel.swift */; };
 		3FE7E8E723821F5000E34A28 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E8E623821F5000E34A28 /* WebViewController.swift */; };
 		3FE7E8E923821F7800E34A28 /* WebViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E8E823821F7800E34A28 /* WebViewUtils.swift */; };
@@ -75,6 +79,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F24DB10238B7CF400A641EA /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		3F24DB11238B7CF400A641EA /* CalendarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		3F24DB12238B7CF500A641EA /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		3F24DB13238B7CF500A641EA /* CalendarDisp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDisp.swift; sourceTree = "<group>"; };
+		3F24DB14238B7CF500A641EA /* outlookCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = outlookCommunication.swift; sourceTree = "<group>"; };
 		3F41D8A32375099100C36C9E /* Button_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button_VC.swift; sourceTree = "<group>"; };
 		3F41D8A42375099100C36C9E /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		3F41D8A52375099100C36C9E /* Dataprocess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dataprocess.swift; sourceTree = "<group>"; };
@@ -92,7 +101,6 @@
 		3F790668237756F900CB87CA /* chatCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatCollectionViewController.swift; sourceTree = "<group>"; };
 		3F79066A23775F0F00CB87CA /* chatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatTableViewController.swift; sourceTree = "<group>"; };
 		3F79066E237A0DB500CB87CA /* mainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageViewController.swift; sourceTree = "<group>"; };
-		3FE59F9B2382347F00133B26 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3FE59F9D2382351000133B26 /* CalenderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderDataModel.swift; sourceTree = "<group>"; };
 		3FE7E8E623821F5000E34A28 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		3FE7E8E823821F7800E34A28 /* WebViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewUtils.swift; sourceTree = "<group>"; };
@@ -191,8 +199,12 @@
 		3FE59F9923822FAC00133B26 /* Outlook Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				3FE59F9B2382347F00133B26 /* CalendarViewController.swift */,
 				3FE59F9D2382351000133B26 /* CalenderDataModel.swift */,
+				3F24DB10238B7CF400A641EA /* CalendarCollectionViewCell.swift */,
+				3F24DB13238B7CF500A641EA /* CalendarDisp.swift */,
+				3F24DB11238B7CF400A641EA /* CalendarHelper.swift */,
+				3F24DB12238B7CF500A641EA /* EventCollectionViewCell.swift */,
+				3F24DB14238B7CF500A641EA /* outlookCommunication.swift */,
 			);
 			path = "Outlook Calendar";
 			sourceTree = "<group>";
@@ -460,14 +472,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F639F8823640B8C00A91A74 /* SidebarViewController.swift in Sources */,
+				3F24DB17238B7CF500A641EA /* EventCollectionViewCell.swift in Sources */,
 				3F41D8FD237DD69E00C36C9E /* ChatMessageCell.swift in Sources */,
+				3F24DB15238B7CF500A641EA /* CalendarCollectionViewCell.swift in Sources */,
 				AE1691E12362863C004C3289 /* ViewController.swift in Sources */,
 				AE1691E72362863C004C3289 /* Duke_Masters_Program.xcdatamodeld in Sources */,
-				3FE59F9C2382347F00133B26 /* CalendarViewController.swift in Sources */,
+				3F24DB18238B7CF500A641EA /* CalendarDisp.swift in Sources */,
 				3FE7E8E723821F5000E34A28 /* WebViewController.swift in Sources */,
 				3F79066B23775F0F00CB87CA /* chatTableViewController.swift in Sources */,
 				AE5E049B2367C56200868CCF /* RoomReservationViewController.swift in Sources */,
 				3F66737E2374FCF200026C63 /* InfoVC.swift in Sources */,
+				3F24DB16238B7CF500A641EA /* CalendarHelper.swift in Sources */,
 				3F41D8A72375099100C36C9E /* Button_VC.swift in Sources */,
 				3F6673802374FCF200026C63 /* DirectoryTableVC.swift in Sources */,
 				3F41D8A92375099100C36C9E /* Dataprocess.swift in Sources */,
@@ -475,6 +490,7 @@
 				3F66737F2374FCF200026C63 /* DirectoryTableViewCell.swift in Sources */,
 				3F41D8A82375099100C36C9E /* ItemCell.swift in Sources */,
 				3FF649332384F443000F9D0E /* Switcher.swift in Sources */,
+				3F24DB19238B7CF500A641EA /* outlookCommunication.swift in Sources */,
 				AE1691DD2362863C004C3289 /* AppDelegate.swift in Sources */,
 				3F41D8AC237509C000C36C9E /* ToDoList_TableVC.swift in Sources */,
 				3F41D8AA2375099100C36C9E /* Detail_VC.swift in Sources */,
