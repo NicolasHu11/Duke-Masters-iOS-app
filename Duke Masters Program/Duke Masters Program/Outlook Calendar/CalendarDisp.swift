@@ -20,7 +20,7 @@ class CalendarDisp: UIViewController {
     @IBOutlet weak var eventCollectionView: UICollectionView!
     
     // initialization flag
-    var loadedFlag = false
+    var acquireTokenFlag = false
     
     // date related properties
     var today = Date()              //today's date
@@ -47,15 +47,28 @@ class CalendarDisp: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("In viewDidLoad")
+        do{
+            try outlookCommunication.instance.initMSAL(parentViewController: self)
+        } catch let error{
+            print("Unable to create Application context \(error)")
+            print("initMSAL error")
+        }
+        print("In viewDidLoad: initializaing graph")
+        guard let currentAccount = outlookCommunication.instance.currentAccount() else {
+            // check to see whether there's a current logged in account.
+            // If none, acquire token interactively.
+//            outlookCommunication.instance.acquireTokenInteractively()
+//            outlookCommunication.instance.graphInit()
+            //outlookCommunication.instance.graphEvent()
+            self.acquireTokenFlag = true
+            return
+        }
+        outlookCommunication.instance.acquireTokenSilently(currentAccount)
+        outlookCommunication.instance.graphInit()
+        
         // MARK: 在作死的边缘疯狂试探还他妈转了个圈
         // Initialize MSAL and graph
-            do{
-                    try outlookCommunication.instance.initMSAL(parentViewController: self)
-                } catch let error{
-                    print("Unable to create Application context \(error)")
-                    print("initMSAL error")
-                }
-                print("In viewDidLoad: initializaing graph")
+            
                 outlookCommunication.instance.graphInit()
                 // 加个calendar试试？好了不要加了加个鬼哦加
                 //outlookCommunication.instance.createCalendar(name: "Sakai Assignments")
@@ -94,17 +107,63 @@ class CalendarDisp: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         print("In viewDidAppear")
-        guard let currentAccount = outlookCommunication.instance.currentAccount() else {
-            // check to see whether there's a current logged in account.
-            // If none, acquire token interactively.
+        if self.acquireTokenFlag == true {
+            self.acquireTokenFlag = false
             outlookCommunication.instance.acquireTokenInteractively()
             outlookCommunication.instance.graphInit()
-            //outlookCommunication.instance.graphEvent()
-            return
+//            do{
+//                try outlookCommunication.instance.initMSAL(parentViewController: self)
+//            } catch let error{
+//                print("Unable to create Application context \(error)")
+//                print("initMSAL error")
+//            }
+//            print("In viewDidLoad: initializaing graph")
+//            guard let currentAccount = outlookCommunication.instance.currentAccount() else {
+//                        // check to see whether there's a current logged in account.
+//                        // If none, acquire token interactively.
+//                outlookCommunication.instance.acquireTokenInteractively()
+//                outlookCommunication.instance.graphInit()
+//                //outlookCommunication.instance.graphEvent()
+//                //self.acquireTokenFlag = true
+//                //return
+//                //break
+//            }
+//                outlookCommunication.instance.acquireTokenSilently(currentAccount)
+//                outlookCommunication.instance.graphInit()
+                    
+            // MARK: 在作死的边缘疯狂试探还他妈转了个圈
+            // Initialize MSAL and graph
+                
+                    //outlookCommunication.instance.graphInit()
+                    calendarID = outlookCommunication.instance.getUserCalendars()
+                    sleep(1)
+                    if(outlookCommunication.instance.calendarRequestCompleted == true){
+                        print("Got calendar data!")
+                        outlookCommunication.instance.calendarRequestCompleted = false
+                        calendarID = outlookCommunication.instance.calendarDict
+                        print(calendarID.count)
+                        for name in calendarID.keys{
+                            calendarName.append(name)
+                        }
+                    }else{
+                        sleep(10)
+                        calendarID = outlookCommunication.instance.calendarDict
+                        print(calendarID.count)
+                    }
+                    
+                    // MARK: 作死完了走走正常流程
+                    self.InitDate()
+                    self.configCalendarLayout()
+                    self.configCalendarBackground(colorSet: calendarBack)
+                    self.dispCollectionView.delegate = self
+                    self.dispCollectionView.dataSource = self
+                    self.eventCollectionView.delegate = self
+                    self.eventCollectionView.dataSource = self
+                    // initialize the layout of collection view
+                    self.initCollection()
+                    self.addWeekdayLabel()
         }
-        outlookCommunication.instance.acquireTokenSilently(currentAccount)
-        outlookCommunication.instance.graphInit()
-        
+//
     }
     
     @IBAction func formerDate(_ sender: Any) {
