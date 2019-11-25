@@ -163,6 +163,12 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
 
         }
     
+    @IBAction func clickReload(_ sender: Any) {
+        DispatchQueue.main.async(execute: {
+            self.collectionView.reloadData()
+        })
+    }
+    
     @IBAction func clickAction(_ sender: Any) {
         allstudent_flag = !allstudent_flag
         print(allstudent_flag)

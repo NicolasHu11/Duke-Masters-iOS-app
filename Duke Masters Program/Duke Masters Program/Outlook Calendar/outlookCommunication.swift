@@ -13,6 +13,10 @@ import MSGraphClientSDK
 import MSGraphClientModels
 
 class outlookCommunication {
+    
+    // Init loaded flag
+    var loadedFlag = false
+    
     // Implement singleton pattern
     static let instance = outlookCommunication()
     

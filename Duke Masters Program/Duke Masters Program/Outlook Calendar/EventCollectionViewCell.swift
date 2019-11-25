@@ -20,8 +20,11 @@ class EventCollectionViewCell: UICollectionViewCell {
         self.startTime.text = self.extractTime(dateTime: from)
         self.endTime.text = self.extractTime(dateTime: to)
         self.subject.text = subject
-        self.location.text = location
-        self.body.text = body
+        self.location.text = (location == nil) ? "" : location
+        //self.body.text = (body == nil) ? "" : body
+        self.body.text = ""
+        // for debug
+        //print(body)
     }
     
     func extractTime(dateTime: String) -> String{

@@ -10,6 +10,15 @@ import UIKit
 
 class SidebarViewController: UIViewController {
    // let page = UIView(frame: self.view.bounds)
+    @IBOutlet weak var sideName: UILabel!
+    @IBOutlet weak var sideNetID: UILabel!
+    @IBOutlet weak var sideEmail: UITextField!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateFields()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -17,6 +26,17 @@ class SidebarViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func updateFields() {
+        if userNetId != "" {
+            sideNetID.text = userNetId
+        }
+        if userName != ""{
+            sideName.text = userName
+        }
+        if userEmail != ""{
+            sideEmail.text = userEmail
+        }
+    }
 
     /*
     // MARK: - Navigation
