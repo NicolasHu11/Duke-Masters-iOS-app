@@ -14,9 +14,13 @@ class SidebarViewController: UIViewController {
     @IBOutlet weak var sideNetID: UILabel!
     @IBOutlet weak var sideEmail: UITextField!
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateFields()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateFields()
        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"bg3.png")!)
         // Do any additional setup after loading the view.
