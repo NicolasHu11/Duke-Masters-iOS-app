@@ -906,7 +906,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Messages" leftItemsSupplementBackButton="YES" id="XzH-Uy-HAQ">
-                        <barButtonItem key="leftBarButtonItem" title="Stu/Staff" id="euU-7Y-Tsw">
+                        <barButtonItem key="leftBarButtonItem" title="show student" id="euU-7Y-Tsw">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="clickAction:" destination="OIa-RV-WA7" id="yKr-bb-136"/>

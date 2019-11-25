@@ -92,7 +92,7 @@ class DirectoryTableVC: UITableViewController,UISearchBarDelegate {
         // Configure the cell...
         cell.Cell_Description?.text = "\(Term), \(MS_MEN) student from \(proj)"
         // pic info
-        cell.Cell_Image.image = UIImage(contentsOfFile: "Duke")
+        cell.Cell_Image.image = UIImage(contentsOfFile: "bluedevils")
         // copy current student info
         return cell
     }

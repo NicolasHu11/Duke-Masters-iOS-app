@@ -111,32 +111,13 @@ class CalendarDisp: UIViewController {
             self.acquireTokenFlag = false
             outlookCommunication.instance.acquireTokenInteractively()
             outlookCommunication.instance.graphInit()
-//            do{
-//                try outlookCommunication.instance.initMSAL(parentViewController: self)
-//            } catch let error{
-//                print("Unable to create Application context \(error)")
-//                print("initMSAL error")
-//            }
-//            print("In viewDidLoad: initializaing graph")
-//            guard let currentAccount = outlookCommunication.instance.currentAccount() else {
-//                        // check to see whether there's a current logged in account.
-//                        // If none, acquire token interactively.
-//                outlookCommunication.instance.acquireTokenInteractively()
-//                outlookCommunication.instance.graphInit()
-//                //outlookCommunication.instance.graphEvent()
-//                //self.acquireTokenFlag = true
-//                //return
-//                //break
-//            }
-//                outlookCommunication.instance.acquireTokenSilently(currentAccount)
-//                outlookCommunication.instance.graphInit()
-                    
+
             // MARK: 在作死的边缘疯狂试探还他妈转了个圈
             // Initialize MSAL and graph
                 
                     //outlookCommunication.instance.graphInit()
                     calendarID = outlookCommunication.instance.getUserCalendars()
-                    sleep(1)
+            sleep(1)
                     if(outlookCommunication.instance.calendarRequestCompleted == true){
                         print("Got calendar data!")
                         outlookCommunication.instance.calendarRequestCompleted = false
@@ -146,7 +127,7 @@ class CalendarDisp: UIViewController {
                             calendarName.append(name)
                         }
                     }else{
-                        sleep(10)
+                        sleep(1)
                         calendarID = outlookCommunication.instance.calendarDict
                         print(calendarID.count)
                     }
@@ -221,7 +202,7 @@ extension CalendarDisp{
         if outlookCommunication.instance.loadedMonth.contains(String(start.prefix(7))) == false{
             outlookCommunication.instance.getEvents(inCalendar: "Calendar", startFrom: start, to: end)
             outlookCommunication.instance.getEvents(inCalendar: "Sakai Assignments", startFrom: start, to: end)
-            sleep(2)
+            sleep(1)
         }
 //        outlookCommunication.instance.getEvents(inCalendar: "Calendar", startFrom: start, to: end)
 //        outlookCommunication.instance.getEvents(inCalendar: "Sakai Assignments", startFrom: start, to: end)
