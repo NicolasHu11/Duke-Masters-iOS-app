@@ -43,9 +43,9 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
         self.users = []
         navigationItem.title = "Chat Log Controller"
         if(allstudent_flag){
-            controlFlag.title = "show student messages"
+            controlFlag.title = "show student"
         }else{
-            controlFlag.title = "show staff messages"
+            controlFlag.title = "show staff"
         }
         print("before finduser")
         findUser()
@@ -173,9 +173,9 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
         allstudent_flag = !allstudent_flag
         print(allstudent_flag)
         if(allstudent_flag){
-            controlFlag.title = "show student messages"
+            controlFlag.title = "show student"
         }else{
-            controlFlag.title = "show staff messages"
+            controlFlag.title = "show staff"
         }
         
         updateMessage()

@@ -564,8 +564,8 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yc6-yo-e2y">
-                                            <rect key="frame" x="10" y="18" width="90" height="90"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluedevils" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yc6-yo-e2y">
+                                            <rect key="frame" x="10" y="17.5" width="90" height="91"/>
                                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="90" id="7eV-m6-90B"/>
@@ -633,8 +633,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OZ2-OY-3kf">
-                                <rect key="frame" x="59.5" y="98" width="256" height="255"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluedevils" translatesAutoresizingMaskIntoConstraints="NO" id="OZ2-OY-3kf">
+                                <rect key="frame" x="59.5" y="97.5" width="256" height="256"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="256" id="HDu-SB-H6b"/>
@@ -906,7 +906,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Messages" leftItemsSupplementBackButton="YES" id="XzH-Uy-HAQ">
-                        <barButtonItem key="leftBarButtonItem" title="Stu/Staff" id="euU-7Y-Tsw">
+                        <barButtonItem key="leftBarButtonItem" title="show student" id="euU-7Y-Tsw">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="clickAction:" destination="OIa-RV-WA7" id="yKr-bb-136"/>
@@ -1176,13 +1176,13 @@
         <image name="arrow.left.circle" catalog="system" width="64" height="60"/>
         <image name="arrow.uturn.left.circle.fill" catalog="system" width="64" height="60"/>
         <image name="background1" width="474" height="948"/>
+        <image name="bluedevils" width="500" height="500"/>
         <image name="buttonDown" width="16" height="16"/>
         <image name="buttonUp" width="16" height="16"/>
         <image name="calendar.circle" catalog="system" width="64" height="60"/>
         <image name="link.circle.fill" catalog="system" width="64" height="60"/>
         <image name="message.circle" catalog="system" width="64" height="60"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
-        <image name="person.circle.fill" catalog="system" width="64" height="60"/>
         <image name="person.crop.circle.fill.badge.plus" catalog="system" width="64" height="50"/>
         <image name="phone.circle.fill" catalog="system" width="64" height="60"/>
         <image name="sidebar.left" catalog="system" width="64" height="46"/>
