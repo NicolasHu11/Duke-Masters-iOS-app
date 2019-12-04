@@ -20,6 +20,7 @@ var UserIndentity = ""
 var Messageuser = ""
 class chatCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UITextViewDelegate {
     var users = [User]()
+    //flag control for showing students/staff messages, default: staff messages
     var allstudent_flag = true
     var inputtextBottomAnchor: NSLayoutConstraint?
     lazy var inputTextview: UITextView = {
@@ -31,7 +32,7 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
         tv.font = UIFont(name: "Courier", size: 20)
         return tv
     }()
-   
+   //left bar button, show student/staff message
     @IBOutlet weak var controlFlag: UIBarButtonItem!
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,21 +42,24 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         self.users = []
-        navigationItem.title = "Chat Log Controller"
+        navigationItem.title = "Notification"
+        //change the title of left bar button
         if(allstudent_flag){
             controlFlag.title = "show student"
         }else{
             controlFlag.title = "show staff"
         }
-        print("before finduser")
+        //find the current user info
         findUser()
-        print("after finduser")
+        //initialize collection view
         prepare()
         setupInputComponents()
+        //get messages from firebase
         updateMessage()
-        
+        //keyboard moving
         setupKeyboardObservers()
         textViewDidChange(inputTextview)
+        //give enough time for loading data from database
         sleep(1)
     }
     func prepare(){
@@ -104,7 +108,7 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
         }
     }
      
-    //MARK:Find the login user info
+    //Find the login user info
     func findUser(){
         print("hello world")
         guard let uid = Auth.auth().currentUser?.uid
@@ -134,8 +138,10 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
         self.users = []
         
         if(allstudent_flag){
+            //staff messages
             fetchUser(tablename: "Main_messages")
         }else{
+            //student messages
             fetchUser(tablename: "messages")
         }
         DispatchQueue.main.async(execute: {
@@ -148,42 +154,36 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
             Database.database().reference().child(tablename).observe(.childAdded, with: { (snapshot) in
                 if let dictionary = snapshot.value as? [String: AnyObject] {
                     let user = User(dictionary: dictionary)
-                    
                     //if you use this setter, your app will crash if your class properties don't exactly match up with the firebase dictionary keys
-                    
                     self.users.insert(user,at:0)
                     print("users:", self.users)
-                    //this will crash because of background thread, so lets use dispatch_async to fix
-                    
-                    
-    //                user.name = dictionary["name"]
                 }
                 
                 }, withCancel: nil)
 
         }
-    
+    //refresh the page
     @IBAction func clickReload(_ sender: Any) {
         DispatchQueue.main.async(execute: {
             self.collectionView.reloadData()
         })
     }
-    
+    //left button action, change the flag to control staff/student
     @IBAction func clickAction(_ sender: Any) {
         allstudent_flag = !allstudent_flag
-        print(allstudent_flag)
         if(allstudent_flag){
             controlFlag.title = "show student"
         }else{
             controlFlag.title = "show staff"
         }
-        
         updateMessage()
+        DispatchQueue.main.async(execute: {
+            self.collectionView.reloadData()
+        })
         print("change!")
     }
+    //save messages to the database when send messages
     @objc func handleSend() {
-        
-        //send message to database
         
         var messageType = "messages"
         if(UserIndentity == "staff"){
@@ -191,17 +191,22 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
         }
         let ref = Database.database().reference().child(messageType)
         let childRef = ref.childByAutoId()
-        let fromId = Auth.auth().currentUser!.uid
+        //get info of current login user
+        guard let fromId = Auth.auth().currentUser?.uid
+           else {
+            //for some reason uid = nil
+            return
+        }
+        //let fromId = Auth.auth().currentUser!.uid
         let time = convertDate(NSDate())
-        
         let emails = Useremails
         let curUserName = Username
-        //is it there best thing to include the name inside of the message node
+        //include following aspects inside the message node
+        //text: content of messages  fromId: the UID of sender
         let values = ["text": inputTextview.text!, "name": curUserName, "email": emails, "fromId":fromId, "time":time]
         // upload messages to Firebase
         childRef.updateChildValues(values)
         // finish upload
-        print("Finish send: handle send")
         self.collectionView.reloadData()
        
     }
@@ -299,3 +304,4 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
     }
    
 }
+

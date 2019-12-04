@@ -36,11 +36,11 @@ var userPrimaryAffiliation : String = ""
 
 
 class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
-    
-    var name = "Fan"
-    var email = "fandy1996v@gmail.com"
-    var password = "Zhangfan1996"
-    var netid = "fz48"
+    //default value
+    var name = "Nobody"
+    var email = "233333@gmail.com"
+    var password = "whsdhrndndx"
+    var netid = "6666"
     var identity = "student"
     //-------------------
     
@@ -458,6 +458,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
         homeVC.view.addSubview(textView)
         
     }
+    //MARK: if user first time use this app, it will automatically register an account on firebase, if he/she has an account, then login the account
     fileprivate func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
                   let ref = Database.database().reference()
                   let usersReference = ref.child("users").child(uid)

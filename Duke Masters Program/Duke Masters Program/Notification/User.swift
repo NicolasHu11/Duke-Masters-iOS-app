@@ -1,12 +1,15 @@
 //
 //  User.swift
-//  gameofchats
+//  Duke Masters Program
 //
-//  Created by Brian Voong on 6/29/16.
-//  Copyright © 2016 letsbuildthatapp. All rights reserved.
+//  Created by student on 11/9/19.
+//  Copyright © 2019 Duke University. All rights reserved.
 //
 
+
 import UIKit
+
+//The class is to save messages content and the info of sender
 
 class User: NSObject {
     var name: String?
