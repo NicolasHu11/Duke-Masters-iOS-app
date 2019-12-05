@@ -199,7 +199,7 @@ class ProgressHUD: UIVisualEffectView {
         }
     }
     
-    let activityIndictor: UIActivityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+    let activityIndictor: UIActivityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
     let label: UILabel = UILabel()
     let blurEffect = UIBlurEffect(style: .light)
     let vibrancyView: UIVisualEffectView
@@ -295,4 +295,11 @@ func storeCookies(_ cookies: [HTTPCookie], forURL url: URL) {
     cookieStorage.setCookies(cookies,
                              for: url,
                              mainDocumentURL: nil)
+}
+
+func deleteLocalCookiesStorage() {
+    let cookieJar = HTTPCookieStorage.shared
+    for cookie in cookieJar.cookies! {
+        cookieJar.deleteCookie(cookie)
+    }
 }
