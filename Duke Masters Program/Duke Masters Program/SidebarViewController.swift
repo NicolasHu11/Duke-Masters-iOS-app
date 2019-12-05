@@ -17,6 +17,7 @@ class SidebarViewController: UIViewController {
     @IBAction func logoutUser(_ sender: Any) {
         
         UserDefaults.standard.set("", forKey: "netid")
+        UserDefaults.standard.set("", forKey: "name")
         UserDefaults.standard.set(false, forKey: "status")
         
         // reset global values in webviewVC
@@ -24,10 +25,15 @@ class SidebarViewController: UIViewController {
         userName = ""
         userNetId = ""
         deleteLocalCookiesStorage()
-        self.dismiss(animated: true, completion: {
-            // here we log out
-            self.performSegue(withIdentifier: "sidebarToLogin", sender: self)
-        })
+        
+        self.performSegue(withIdentifier: "sidebarToLogin", sender: nil)
+        print("debug: segue to webview")
+        
+//        let loginVC = WebViewController()
+//        let homeVC : UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homePageVC") as UIViewController
+//        self.present(WebViewController(), animated: true, completion: nil)
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

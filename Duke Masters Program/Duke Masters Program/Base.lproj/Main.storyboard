@@ -347,7 +347,7 @@
                         <outlet property="sideEmail" destination="UR3-5e-R88" id="NcH-Uk-lRN"/>
                         <outlet property="sideName" destination="Qwa-ud-cxJ" id="SDF-Af-XnB"/>
                         <outlet property="sideNetID" destination="ahk-2H-uEo" id="R84-7M-Gdi"/>
-                        <segue destination="Zuz-zd-o9f" kind="presentation" identifier="sidebarToLogin" modalPresentationStyle="fullScreen" id="x7z-Sv-su3"/>
+                        <segue destination="Zuz-zd-o9f" kind="presentation" identifier="sidebarToLogin" modalPresentationStyle="fullScreen" id="qpJ-BC-36v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQG-Fr-5na" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

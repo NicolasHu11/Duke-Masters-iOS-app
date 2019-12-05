@@ -29,9 +29,9 @@ var assignments : [(title: String, siteId: String, due: String, instructions: St
 
 //var userId : String = "" // userID on sakai,
 // user info extracted
-var userNetId : String = "" // net ID
+var userNetId : String = UserDefaults.standard.string(forKey: "netid") ?? "" // net ID
 //var userEmail : String = "" // duke email
-var userName : String = "" // this is used in netId
+var userName : String = UserDefaults.standard.string(forKey: "name") ?? "" // this is used in netId
 //var userAffiliations = [String]() // this depends, might be multiple
 //var userPrimaryAffiliation : String = "" // only one, used in messaging
 
@@ -88,8 +88,8 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
         // faceID
         let status = UserDefaults.standard.bool(forKey: "status")
         let thisNetId = UserDefaults.standard.string(forKey: "netid") ?? ""
-        print("defaults status is:", status)
-        print("defaults netid is:", thisNetId)
+//        print("defaults status is:", status)
+//        print("defaults netid is:", thisNetId)
         
         if status == true && thisNetId != ""{
             print("default status is:", status)
@@ -170,6 +170,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
                 UserDefaults.standard.set(true, forKey: "status")
                 print("netid before setting key",userNetId)
                 UserDefaults.standard.set(userNetId, forKey: "netid")
+                UserDefaults.standard.set(userName, forKey: "name")
                 Switcher.updateRootVC()
             })
             
@@ -465,6 +466,8 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
                     if let thisName = json["displayName"] as? String {
                         userName = thisName
                         self.name = thisName
+                        UserDefaults.standard.set(userName, forKey: "name")
+
                         
                     }
                     if let thisPri = json["eduPersonPrimaryAffiliation"] as? String {
