@@ -28,12 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         print(remoteMessage.appData)
     }
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // below is for login   -Nicolas
-        Switcher.updateRootVC()
-        
+
+
 
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
@@ -55,6 +53,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         FirebaseApp.configure()
         // Override point for customization after application launch.
         //FirebaseApp.configure()
+        
+        // below is for login   -Nicolas
+        print("ℹ️ Debug: app delegate, call update VC")
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window!.makeKeyAndVisible()
+        Switcher.updateRootVC()
         return true
     }
 
