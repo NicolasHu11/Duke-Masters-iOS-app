@@ -146,7 +146,7 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
     func updateMessage(){
         self.users = []
         if(allstudent_flag){
-            fetchUser(tablename: "main_messages")
+            fetchUser(tablename: "Main_messages")
             controlFlag.title = "show student"
             navigationItem.title = "STAFF"
         }else{
