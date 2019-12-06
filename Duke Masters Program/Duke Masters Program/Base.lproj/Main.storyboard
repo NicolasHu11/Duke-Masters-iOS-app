@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mm3-Tt-Z7p">
-                                <rect key="frame" x="0.0" y="0.0" width="375.00000000000011" height="667.00000000000023"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OK6-20-T3o">
                                 <rect key="frame" x="62.5" y="257" width="250" height="100"/>
@@ -97,7 +97,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" scale="large"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DtH-3h-b5z" kind="presentation" modalPresentationStyle="automatic" id="6nH-et-qF8"/>
+                                    <segue destination="DtH-3h-b5z" kind="presentation" id="6nH-et-qF8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwm-wH-d1H">
@@ -1239,7 +1239,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="tIY-pG-J0z"/>
         <segue reference="ICy-sd-fqq"/>
-        <segue reference="QTK-wl-xZD"/>
+        <segue reference="sTN-li-zM9"/>
         <segue reference="cFW-us-Qgw"/>
     </inferredMetricsTieBreakers>
 </document>
