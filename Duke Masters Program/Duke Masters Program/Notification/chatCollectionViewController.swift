@@ -180,16 +180,6 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
     }
     //left button action, change the flag to control staff/student
     @IBAction func clickAction(_ sender: Any) {
-        allstudent_flag = !allstudent_flag
-        print(allstudent_flag)
-        if(allstudent_flag){
-            controlFlag.title = "show student"
-            nbar.title = "Staff"
-        }else{
-            controlFlag.title = "show staff"
-            nbar.title = "Student"
-        }
-        
 //        updateMessage()
         DispatchQueue.main.async(execute: {
             self.allstudent_flag = !self.allstudent_flag
