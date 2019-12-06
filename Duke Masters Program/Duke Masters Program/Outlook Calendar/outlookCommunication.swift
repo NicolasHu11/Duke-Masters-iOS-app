@@ -237,6 +237,7 @@ extension outlookCommunication{
 
 // MARK: Event Related
 extension outlookCommunication{
+    // Used to get events from outlook calendar
     func getEvents(inCalendar: String, startFrom: String, to: String){
         let calendarID = self.calendarDict[inCalendar] as! String
         //print(inCalendar)
@@ -305,7 +306,7 @@ extension outlookCommunication{
     eventsDataTask?.execute()
 }
 
-    
+    // Reserved to post event to user's specifid calendar
     func createEvent(start: String, end: String, subject: String, body: String = ""){
         let urlRequest = NSMutableURLRequest(url: URL(string: "\(MSGraphBaseURL)/me/events")!)
         urlRequest.httpMethod = "POST"
@@ -387,7 +388,7 @@ extension outlookCommunication{
         return calendarDict
     }
 
-    // Create a calendar for current user
+    // Reserved for creating a calendar for current user
     func createCalendar(name: String) {
         print("Trying to create a calendar")
         let urlRequest = NSMutableURLRequest(url: URL(string: "\(MSGraphBaseURL)/me/calendars")!)

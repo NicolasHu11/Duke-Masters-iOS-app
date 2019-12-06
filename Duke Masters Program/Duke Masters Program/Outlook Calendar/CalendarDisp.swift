@@ -185,10 +185,10 @@ class CalendarDisp: UIViewController {
         self.eventCollectionView.reloadData()
     }
     
-    // Just for debugging, making sure that 
-    @IBAction func signOut(_ sender: Any) {
-        outlookCommunication.instance.signOut()
-    }
+//    // Just for debugging, making sure that
+//    @IBAction func signOut(_ sender: Any) {
+//        outlookCommunication.instance.signOut()
+//    }
 }
 
 // PART1: date pick, display and related functions
