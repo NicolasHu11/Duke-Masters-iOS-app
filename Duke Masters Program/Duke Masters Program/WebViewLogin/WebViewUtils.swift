@@ -303,3 +303,33 @@ func deleteLocalCookiesStorage() {
         cookieJar.deleteCookie(cookie)
     }
 }
+
+
+func storeCookies() {
+    let cookiesStorage = HTTPCookieStorage.shared
+    let userDefaults = UserDefaults.standard
+
+    var cookieDict = [String : AnyObject]()
+
+    for cookie in cookiesStorage.cookies! {
+        cookieDict[cookie.name] = cookie.properties as AnyObject?
+    }
+
+    userDefaults.set(cookieDict, forKey: "cookiesKey")
+}
+
+func restoreCookies() {
+    let cookiesStorage = HTTPCookieStorage.shared
+    let userDefaults = UserDefaults.standard
+
+    if let cookieDictionary = userDefaults.dictionary(forKey: "cookiesKey") {
+        print("debug: restore cookie dict:",cookieDictionary,"\n============")
+
+        for (_, cookieProperties) in cookieDictionary {
+            if let cookie = HTTPCookie(properties: cookieProperties as! [HTTPCookiePropertyKey : Any] ) {
+                cookiesStorage.setCookie(cookie)
+                print("debug: restore cookies: ", cookie, "\n============")
+            }
+        }
+    }
+}

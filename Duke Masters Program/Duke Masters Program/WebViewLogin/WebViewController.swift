@@ -94,8 +94,9 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
         if status == true && thisNetId != ""{
             print("default status is:", status)
             print("defaults netid is:", thisNetId)
-            
+            self.netid = thisNetId
             self.email = thisNetId + "@duke.edu"
+            
             localAuth()
         }
         
@@ -124,9 +125,12 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
 //                                sleep(2)
                                 self.performSegue(withIdentifier: "webviewToHome", sender: self)
                                 self.handleRegister()
-                            })
+                                restoreCookies()
+                                
+                                print("debug: re login, get sakaiinfo")
+                                self.getSakaiInfo()
                             
-    
+                            })
                             
                         } else {
                             // User did not authenticate successfully, look at error and take appropriate action
@@ -172,10 +176,11 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
                 // Switcher update root VC
                 sleep(2)
                 UserDefaults.standard.set(true, forKey: "status")
+                
                 print("netid before setting key",userNetId)
                 UserDefaults.standard.set(userNetId, forKey: "netid")
                 UserDefaults.standard.set(userName, forKey: "name")
-                Switcher.updateRootVC()
+//                Switcher.updateRootVC()
             })
             
         }
@@ -221,6 +226,8 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
 //                    print("debug cookies:\n",cookie, "\n===================" )
                 }
             }
+            storeCookies()// save to local
+
 //            webView.saveCurrentCookies(nil)
             
 //            print("ℹ️ debug: navigation response: cookies saved")
@@ -248,11 +255,12 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
     
     //MARK: get Sakai Site Info
     func getSakaiInfo() {
-        // double check the if login successfully
-        if !((webView.url?.absoluteString.hasPrefix(sakaiPortalString))!) {
-//            print("debug: extract info: false portal")
-            return
-        }
+        print("debug: get sakai info")
+//        // double check the if login successfully
+//        if !((webView.url?.absoluteString.hasPrefix(sakaiPortalString))!) {
+////            print("debug: extract info: false portal")
+//            return
+//        }
         
         sites = [String]()
         // call sakai API
@@ -269,7 +277,19 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
         let task = session.dataTask(with: urlRequest as URLRequest){
             (data, response, error) -> Void in
             guard let httpRes = response as? HTTPURLResponse, (200...299).contains(httpRes.statusCode) else {
-                print("debug: get calendar: no response ")
+                print("debug: getsakaiinfo: no response from sakai")
+                
+                // alert for no response, need to relog in
+                let alert = UIAlertController(title: "Login Expired", message: "Fail to fetch assignments from sakai. Please login again", preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                    self.performSegue(withIdentifier: "sidebarToLogin", sender: nil)
+                    print("debug: session expired, need to relogin")
+                }))
+                alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+
+                self.present(alert, animated: true)
+                
                 self.sites = []
 //                userId = ""
 //                userEmail = ""
@@ -330,12 +350,13 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
             print("ℹ️ debug: sakai info: netid is ", self.netid, ".")
 //            print("ℹ️ debug: sakai info: now get assignments")
             
+           
             
-            // dispatch
+//            // dispatch
             DispatchQueue.main.async(execute: {
                 self.getSakaiAssignment()
                 self.getNetIdResults(netid: self.netid)
-                
+
             })
             
             // now we have the basic user info
@@ -433,8 +454,8 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
             task.resume()
             
         } // end for loop of sites
-//        print("ℹ️ debug: all assignments done")
-//        print(assignments)
+        print("ℹ️ debug: all assignments done")
+        print(assignments)
     }
     
     
