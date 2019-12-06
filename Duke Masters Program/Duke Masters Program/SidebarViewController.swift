@@ -29,10 +29,6 @@ class SidebarViewController: UIViewController {
         self.performSegue(withIdentifier: "sidebarToLogin", sender: nil)
         print("debug: segue to webview")
         
-//        let loginVC = WebViewController()
-//        let homeVC : UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homePageVC") as UIViewController
-//        self.present(WebViewController(), animated: true, completion: nil)
-
         
     }
     
