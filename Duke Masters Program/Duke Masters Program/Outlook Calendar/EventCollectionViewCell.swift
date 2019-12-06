@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK:  The Collection Cell for Events
 class EventCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var startTime: UILabel!

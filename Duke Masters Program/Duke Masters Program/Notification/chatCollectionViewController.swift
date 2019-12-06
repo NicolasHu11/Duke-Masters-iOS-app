@@ -23,6 +23,8 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
     //flag control for showing students/staff messages, default: staff messages
     var allstudent_flag = true
     var inputtextBottomAnchor: NSLayoutConstraint?
+    
+    @IBOutlet weak var nbar: UINavigationItem!
     lazy var inputTextview: UITextView = {
         let tv = UITextView()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -178,6 +180,15 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
     }
     //left button action, change the flag to control staff/student
     @IBAction func clickAction(_ sender: Any) {
+        allstudent_flag = !allstudent_flag
+        print(allstudent_flag)
+        if(allstudent_flag){
+            controlFlag.title = "show student"
+            nbar.title = "Staff"
+        }else{
+            controlFlag.title = "show staff"
+            nbar.title = "Student"
+        }
         
 //        updateMessage()
         DispatchQueue.main.async(execute: {

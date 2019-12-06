@@ -8,37 +8,38 @@
 
 import UIKit
 import MSGraphMSALAuthProvider
-import MSGraphClientSDK
 import MSGraphClientModels
 
-// General settings
+// MARK: THE VIEW CONTROLLER FOR CALENDAR
 class CalendarDisp: UIViewController {
-//class CalendarDisp: UITableViewController {
+    
     @IBOutlet weak var dispMonth: UILabel!
     @IBOutlet weak var dispYear: UILabel!
     @IBOutlet weak var dispCollectionView: UICollectionView!
     @IBOutlet weak var eventCollectionView: UICollectionView!
     
-    // initialization flag
+    // Token flag: Indicates whether token should be acquired interactively in viewDidAppear
     var acquireTokenFlag = false
     
-    // date related properties
+    // ---------- Date Related Properties ----------
     var today = Date()              //today's date
     var todayInfo = [2019,12,31]    //today's info
     var currentMonth = 12           //current page's month
     var currentYear = 2019          //current page's year
-    var currentDay = 31              //selected date
+    var currentDay = 31             //selected date
     
-    // calendar layout related properties
+    // ---------- Calendar Layout Related Properties ----------
     // for calendar layout
     var startWeekDay = 0            //start weekday of current month
     var calenCellNum = 35           //cell number needed for current month
     var todayCell = 0               //the cell NO of today
-    // for calendar data
+    
+    // ---------- Calendar Data Related Properties ----------
+    // for outlook calendar
     var calendarID = [String:Any]() //directory of calendars
     var calendarName = [String]()   //array of calendars' name
     // for sakai assignments
-    var sakaiDict = [String:[(title: String, siteId: String, due: String, instructions: String)]]()
+    var sakaiDict = [String:[(title: String, siteId: String, due: String, instructions: String)]]() // Directory for sakai assignments
     var sortedEvent : [(calendar: String, index: Int)] = []
     
     // event related properties
@@ -47,52 +48,51 @@ class CalendarDisp: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("In viewDidLoad")
+        
+        // ---------- MSAL Initialization ----------
         do{
             try outlookCommunication.instance.initMSAL(parentViewController: self)
         } catch let error{
             print("Unable to create Application context \(error)")
             print("initMSAL error")
         }
-        print("In viewDidLoad: initializaing graph")
+        
+        // ---------- Token Acquiring ----------
+        // Check to see whether there's a current logged in account:
+        // -if none, set the acquireTokenFlag to be true and acquire token interactively in viewDidAppear()
         guard let currentAccount = outlookCommunication.instance.currentAccount() else {
-            // check to see whether there's a current logged in account.
-            // If none, acquire token interactively.
-//            outlookCommunication.instance.acquireTokenInteractively()
-//            outlookCommunication.instance.graphInit()
-            //outlookCommunication.instance.graphEvent()
+            print("Currently no account exists! Acquire token interactively in viewDidAppear!")
             self.acquireTokenFlag = true
+            outlookCommunication.instance.tokenFlag = false
+            //outlookCommunication.instance.acquireTokenInteractively()
             return
         }
+        
+        print("Got Token")
+        // If there exists a current logged in account:
+        // -Acquire token silently
         outlookCommunication.instance.acquireTokenSilently(currentAccount)
+        // -Initialize graph relatede properties
         outlookCommunication.instance.graphInit()
         
-        // MARK: 在作死的边缘疯狂试探还他妈转了个圈
-        // Initialize MSAL and graph
-            
-                outlookCommunication.instance.graphInit()
-                // 加个calendar试试？好了不要加了加个鬼哦加
-                //outlookCommunication.instance.createCalendar(name: "Sakai Assignments")
-                calendarID = outlookCommunication.instance.getUserCalendars()
-                sleep(1)
-            //        while(outlookCommunication.instance.calendarRequestCompleted == true){
-            //            sleep(1)
-            //        }
-                    //print("outside the while loop")
-                if(outlookCommunication.instance.calendarRequestCompleted == true){
-                    print("Got calendar data!")
-                    outlookCommunication.instance.calendarRequestCompleted = false
-                    calendarID = outlookCommunication.instance.calendarDict
-                    print(calendarID.count)
-                    for name in calendarID.keys{
-                        calendarName.append(name)
-                    }
-                }else{
-                    sleep(10)
-                    calendarID = outlookCommunication.instance.calendarDict
-                    print(calendarID.count)
-                }
+        // ---------- Acquiring Data ----------
+        // -get all the calendars for current user
+        calendarID = outlookCommunication.instance.getUserCalendars()
+        sleep(1)    // Wait until data returned
+        if(outlookCommunication.instance.calendarRequestCompleted == true){ // just in case
+            print("Got calendar data!")
+            outlookCommunication.instance.calendarRequestCompleted = false  // reset the indicator
+            calendarID = outlookCommunication.instance.calendarDict         // get calendars and corresponding ID
+            for name in calendarID.keys{
+                calendarName.append(name) // calendar name
+            }
+        }else{
+            sleep(10)
+            calendarID = outlookCommunication.instance.calendarDict
+            print(calendarID.count)
+        }
         
-        // MARK: 作死完了走走正常流程
+        // ---------- Figuring out the View ----------
         self.InitDate()
         self.configCalendarLayout()
         self.configCalendarBackground(colorSet: calendarBack)
@@ -105,54 +105,61 @@ class CalendarDisp: UIViewController {
         self.addWeekdayLabel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         print("In viewDidAppear")
+        
+        // If it's required to acquire token interactively
         if self.acquireTokenFlag == true {
-            self.acquireTokenFlag = false
             outlookCommunication.instance.acquireTokenInteractively()
+            // Data Acquiring and Reloading CollectionViews will completed after token was acquired interactively(in the completion block of the task)
             outlookCommunication.instance.graphInit()
-
-            // MARK: 在作死的边缘疯狂试探还他妈转了个圈
-            // Initialize MSAL and graph
-                
-                    //outlookCommunication.instance.graphInit()
-                    calendarID = outlookCommunication.instance.getUserCalendars()
+            outlookCommunication.instance.tokenFlag = true
+            /*
+            calendarID = outlookCommunication.instance.getUserCalendars()
             sleep(1)
-                    if(outlookCommunication.instance.calendarRequestCompleted == true){
-                        print("Got calendar data!")
-                        outlookCommunication.instance.calendarRequestCompleted = false
-                        calendarID = outlookCommunication.instance.calendarDict
-                        print(calendarID.count)
-                        for name in calendarID.keys{
-                            calendarName.append(name)
-                        }
-                    }else{
-                        sleep(1)
-                        calendarID = outlookCommunication.instance.calendarDict
-                        print(calendarID.count)
-                    }
-                    
-                    // MARK: 作死完了走走正常流程
-                    self.InitDate()
-                    self.configCalendarLayout()
-                    self.configCalendarBackground(colorSet: calendarBack)
-                    self.dispCollectionView.delegate = self
-                    self.dispCollectionView.dataSource = self
-                    self.eventCollectionView.delegate = self
-                    self.eventCollectionView.dataSource = self
-                    // initialize the layout of collection view
-                    self.initCollection()
-                    self.addWeekdayLabel()
+            if(outlookCommunication.instance.calendarRequestCompleted == true){
+                print("Got calendar data!")
+                outlookCommunication.instance.calendarRequestCompleted = false
+                calendarID = outlookCommunication.instance.calendarDict
+                print(calendarID.count)
+                for name in calendarID.keys{
+                    calendarName.append(name)
+                }
+                }else{
+                    sleep(1)
+                    calendarID = outlookCommunication.instance.calendarDict
+                    print(calendarID.count)
+            
+            // MARK: 作死完了走走正常流程
+            // MARK: Display related settings
+            self.InitDate()     // set date related properties*/
+            self.configCalendarLayout()     // set calendar's layout
+            self.configCalendarBackground(colorSet: calendarBack)   // set calendar's background color
+            self.dispCollectionView.delegate = self
+            self.dispCollectionView.dataSource = self
+            self.eventCollectionView.delegate = self
+            self.eventCollectionView.dataSource = self
+            // initialize the layout of collection view
+            self.initCollection()
+            self.addWeekdayLabel()
+            self.acquireTokenFlag = false
         }
 //
     }
     
+    // Action sent by button, figure out data and present the former month
     @IBAction func formerDate(_ sender: Any) {
         self.dereaseDate()
         let (start, end) = startEndLiteral(year: self.currentYear, month: currentMonth)
         if outlookCommunication.instance.loadedMonth.contains(String(start.prefix(7))) == false{
             outlookCommunication.instance.getEvents(inCalendar: "Calendar", startFrom: start, to: end)
-            outlookCommunication.instance.getEvents(inCalendar: "Sakai Assignments", startFrom: start, to: end)
+            if self.calendarName.contains("Sakai Assignments"){
+                outlookCommunication.instance.getEvents(inCalendar: "Sakai Assignments", startFrom: start, to: end)
+            }
         }
         self.configCalendarLayout()
         self.dispCollectionView.reloadData()
@@ -160,12 +167,16 @@ class CalendarDisp: UIViewController {
         self.sortEventData()
         self.eventCollectionView.reloadData()
     }
+    
+    // Action sent by button, figure out data and present the later nomth
     @IBAction func laterDate(_ sender: Any) {
         self.increaseDate()
         let (start, end) = startEndLiteral(year: self.currentYear, month: currentMonth)
         if outlookCommunication.instance.loadedMonth.contains(String(start.prefix(7))) == false{
             outlookCommunication.instance.getEvents(inCalendar: "Calendar", startFrom: start, to: end)
-            outlookCommunication.instance.getEvents(inCalendar: "Sakai Assignments", startFrom: start, to: end)
+            if self.calendarName.contains("Sakai Assignments"){
+                outlookCommunication.instance.getEvents(inCalendar: "Sakai Assignments", startFrom: start, to: end)
+            }
         }
         self.configCalendarLayout()
         self.dispCollectionView.reloadData()
@@ -173,13 +184,17 @@ class CalendarDisp: UIViewController {
         self.sortEventData()
         self.eventCollectionView.reloadData()
     }
+    
+//    // Just for debugging, making sure that
+//    @IBAction func signOut(_ sender: Any) {
+//        outlookCommunication.instance.signOut()
+//    }
 }
 
 // PART1: date pick, display and related functions
 extension CalendarDisp{
     // When first loaded, display current month by default
     // By calling this, initialize current year and current month
-    // !!!!! current day seems to be verbose????
     func InitDate(){
         //  In initialization of date!
         self.today = Date().addingTimeInterval(TimeInterval(NSTimeZone.system.secondsFromGMT()))
@@ -201,14 +216,14 @@ extension CalendarDisp{
         let (start, end) = startEndLiteral(year: self.currentYear, month: currentMonth)
         if outlookCommunication.instance.loadedMonth.contains(String(start.prefix(7))) == false{
             outlookCommunication.instance.getEvents(inCalendar: "Calendar", startFrom: start, to: end)
-            outlookCommunication.instance.getEvents(inCalendar: "Sakai Assignments", startFrom: start, to: end)
+            if self.calendarName.contains("Sakai Assignments") {
+                outlookCommunication.instance.getEvents(inCalendar: "Sakai Assignments", startFrom: start, to: end)
+            }
             sleep(1)
         }
-//        outlookCommunication.instance.getEvents(inCalendar: "Calendar", startFrom: start, to: end)
-//        outlookCommunication.instance.getEvents(inCalendar: "Sakai Assignments", startFrom: start, to: end)
+        // Prepare Sakai Data
         self.sakaiPrep()
-        // Just wait a minute...
-        //sleep(2)
+        // Sort all the data
         self.sortEventData()
     }
     // Increase by one month
@@ -270,40 +285,30 @@ extension CalendarDisp{
         self.view.layer.insertSublayer(background, at: 0)
     }
     
-    // Organize sakai data
+    // Organize sakai data, the result will be stored in corresponding dictionary
     func sakaiPrep(){
-        //for debugging
-        print("---------------- In SAKAI PREP! -------------------")
-        
-//        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-//        var start: String
-//        let eventStartDate = dateFormatter.date(from: String(self.sakaiDict[selectedDate]![i].due.prefix(19)))
-        
+        print("IN SAKAI PREPERATION!")
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-//        print("ℹ️ debug: all assignments done")
-//        print(assignments)
         for index in 0..<assignments.count{
+            var assignmentHelper = assignments[index]
             print(assignments[index].title)
             print(assignments[index].due)
             print(assignments[index].siteId)
             //Modify the time string
             var tempDate = dateFormatter.date(from: String(assignments[index].due.prefix(19)))
             tempDate = tempDate?.addingTimeInterval(TimeInterval(NSTimeZone.system.secondsFromGMT()))
-            assignments[index].due = dateFormatter.string(from: tempDate!)
-            print(assignments[index].due)
-            let date = String(assignments[index].due.prefix(10))
+            //assignments[index].due = dateFormatter.string(from: tempDate!)
+            assignmentHelper.due = dateFormatter.string(from: tempDate!)
+            print(assignmentHelper.due)
+            let date = String(assignmentHelper.due.prefix(10))
             if self.sakaiDict.keys.contains(date){
-                self.sakaiDict[date]?.insert(assignments[index], at: 0)
+                self.sakaiDict[date]?.insert(assignmentHelper, at: 0)
             }
             else{
-                self.sakaiDict[date] = [assignments[index]]
+                self.sakaiDict[date] = [assignmentHelper]
             }
         }
-        
-        
-        
-        
     }
 }
 
@@ -385,7 +390,6 @@ extension CalendarDisp: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
         // ---------- FOR EVENT COLLECTION VIEW ----------
         else{
             print("In Creating Events")
-            //print(self.sakaiDict[self.selectedDate])
             let eveCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as! EventCollectionViewCell
             let indicator = self.sortedEvent[indexPath.row]
             if indicator.calendar == "Calendar"{
@@ -399,20 +403,13 @@ extension CalendarDisp: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
                 let eventStartDate = dateFormatter.date(from: String(temp.start!.dateTime.prefix(19)))
                 let eventEndDate = dateFormatter.date(from: String(temp.end!.dateTime.prefix(19)))
                 let currentDate = Date().addingTimeInterval(TimeInterval(NSTimeZone.system.secondsFromGMT()))
-                print("start: \(String(describing: eventStartDate))")
-                print("end: \(String(describing: eventEndDate))")
-                print("current: \(String(describing: currentDate)))")
                 if currentDate.timeIntervalSince(eventStartDate!) < 0{
-                    print("current比start早, 还没开始")
                     eveCollectionViewCell.setTextColor(upcomingTextColor)
                 }
                 else{
-                    print("current比start晚, 不确定")
                     if currentDate.timeIntervalSince(eventEndDate!) < 0{
-                        print("current比end早，还没结束 ")
                         eveCollectionViewCell.setTextColor(redDarker[0])
                     }else{
-                        print("current比end晚，过去了")
                         eveCollectionViewCell.setTextColor(passedTextColor)
                     }
                 }
@@ -428,7 +425,6 @@ extension CalendarDisp: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
                 eveCollectionViewCell.location.text = ""
                 eveCollectionViewCell.subject.text = ""
             }
-            //eveCollectionViewCell.setTextColor(upcomingTextColor)
             // set size
             let totalWidth = self.eventCollectionView.bounds.width
             let totalHeight = self.eventCollectionView.bounds.height
@@ -448,7 +444,6 @@ extension CalendarDisp: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
         }
         // ---------- FOR EVENT COLLECTION VIEW ----------
         else{
-            //return outlookCommunication.instance.eventDict[selectedDate]?.count ?? 0
             return self.sortedEvent.count
         }
     }
@@ -556,20 +551,20 @@ extension CalendarDisp: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
         }
     }
     
+    // Sort data for current day in time ascending
     func sortEventData(){
         self.sortedEvent = []
         if self.selectedDate == ""{
             return
         }
-        print("date: \(self.selectedDate)")
-        //print(self.sakaiDict)
+        //print("date: \(self.selectedDate)")
         var num1: Int
         if outlookCommunication.instance.eventDict.keys.contains(self.selectedDate){
             num1 = (outlookCommunication.instance.eventDict[self.selectedDate]?.count)!
         }else{
             num1 = 0
         }
-        print("num1: \(num1)")
+        //print("num1: \(num1)")
         var num2: Int
         if sakaiDict.keys.contains(self.selectedDate){
             num2 = (sakaiDict[selectedDate]?.count)!
@@ -577,12 +572,11 @@ extension CalendarDisp: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
         else{
             num2 = 0
         }
-        print("num2: \(num2)")
+        //print("num2: \(num2)")
         let dateFormatter1 = DateFormatter()
         dateFormatter1.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         
         for i in 0..<num1{
-            //self.sortedEvent.append(["Calendar": i])
             self.sortedEvent.append(("Calendar", i))
         }
         for i in 0..<num2{

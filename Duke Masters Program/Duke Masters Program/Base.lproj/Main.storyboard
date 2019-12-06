@@ -894,7 +894,7 @@
             </objects>
             <point key="canvasLocation" x="6525.6000000000004" y="-1699.7001499250375"/>
         </scene>
-        <!--Messages-->
+        <!--Staff-->
         <scene sceneID="QqK-jF-tDG">
             <objects>
                 <collectionViewController id="OIa-RV-WA7" customClass="chatCollectionViewController" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
@@ -919,7 +919,7 @@
                             <outlet property="delegate" destination="OIa-RV-WA7" id="dG1-2A-Gls"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Messages" leftItemsSupplementBackButton="YES" id="XzH-Uy-HAQ">
+                    <navigationItem key="navigationItem" title="Staff" leftItemsSupplementBackButton="YES" id="XzH-Uy-HAQ">
                         <barButtonItem key="leftBarButtonItem" title="show student" id="euU-7Y-Tsw">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -935,6 +935,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="controlFlag" destination="euU-7Y-Tsw" id="dIA-Nd-Q9l"/>
+                        <outlet property="nbar" destination="XzH-Uy-HAQ" id="TVJ-Jg-hnt"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fU6-HC-rTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1168,6 +1169,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="555-cI-fbg">
+                                <rect key="frame" x="257" y="45" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="signOut"/>
+                                <connections>
+                                    <action selector="signOut:" destination="Kmv-fG-wjt" eventType="touchUpInside" id="8Fx-6c-cag"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="RR3-0R-r7f"/>
@@ -1217,8 +1226,8 @@
         <image name="arrow.uturn.left.circle.fill" catalog="system" width="64" height="60"/>
         <image name="background1" width="474" height="948"/>
         <image name="bluedevils" width="500" height="500"/>
-        <image name="buttonDown" width="16" height="16"/>
-        <image name="buttonUp" width="16" height="16"/>
+        <image name="buttonDown" width="512" height="512"/>
+        <image name="buttonUp" width="512" height="512"/>
         <image name="calendar.circle" catalog="system" width="64" height="60"/>
         <image name="link.circle.fill" catalog="system" width="64" height="60"/>
         <image name="message.circle" catalog="system" width="64" height="60"/>

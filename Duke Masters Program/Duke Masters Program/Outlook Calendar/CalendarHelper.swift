@@ -8,7 +8,7 @@
 
 import UIKit
 
-// Dictionary between month number and month name
+// CONSTANT: Dictionary between month number and month name
 let monthLiteral = [1:"January",
                     2:"February",
                     3:"March",
@@ -21,9 +21,9 @@ let monthLiteral = [1:"January",
                     10:"October",
                     11: "November",
                     12:"December"]
-let weekdayLiteral = [1:"Mon.", 2:"Tues.", 3:"Wed.", 4:"Thur.", 5:"Fri.", 6:"Sat.", 7:"Sun."]
+let weekdayLiteral = [2:"Mon.", 3:"Tues.", 4:"Wed.", 5:"Thur.", 6:"Fri.", 7:"Sat.", 1:"Sun."]
 
-// For a given date, return which weekday it is
+// FUNCTION: For a given date, return which weekday it is
 // Sun: 0   Mon: 1  Tue: 2  Wen: 3  Thu: 4  Fri: 5  Sat: 6
 func configWeekDay(year: Int, month: Int, day: Int) -> Int{
     let dateFormat = DateFormatter()
@@ -38,7 +38,7 @@ func configWeekDay(year: Int, month: Int, day: Int) -> Int{
     return weekday
 }
 
-// For a given date, return how many days in that month
+// FUNCTION: For a given date, return how many days in that month
 func monthDays(year: Int, month: Int) -> Int{
     switch month {
     case 2:
@@ -50,7 +50,7 @@ func monthDays(year: Int, month: Int) -> Int{
     }
 }
 
-// For a given month, return the start time and end time
+// FUNCTION: For a given month, return the start time and end time
 func startEndLiteral(year: Int, month: Int) -> (String, String){
     let monthDate = monthDays(year: year, month: month)
     let start = "\(year)" + "-" + ((month < 10) ? "0\(month)" : "\(month)") + "-01"//T00:00"
@@ -58,7 +58,15 @@ func startEndLiteral(year: Int, month: Int) -> (String, String){
     return (start, end)
 }
 
-// Display color related
+// FUNCTION: Given a string, extract the subString representing the time information
+func extractTime(dateTime: String) -> String{
+    print(dateTime)
+    let start = dateTime.index(after: dateTime.index(of: "T") ?? dateTime.startIndex)
+    let subString = String(dateTime[start..<dateTime.index(start,offsetBy: 8)])
+    return subString
+}
+
+// CONSTANT: Display color related
 let redBrighter = [UIColor(red: 0.9098, green: 0.1255, blue: 0.2, alpha: 1),
                    UIColor(red: 0.9176, green: 0.1961, blue: 0.2667, alpha: 1),
                    UIColor(red: 0.9255, green: 0.2667, blue: 0.3294, alpha: 1),
@@ -73,7 +81,6 @@ let redDarker = [UIColor(red: 0.8627, green: 0.3294, blue: 0.3804, alpha: 1),
                  UIColor(red: 0.7373, green: 0.4549, blue: 0.4784, alpha: 1),
                  UIColor(red: 0.7098, green: 0.4824, blue: 0.5059, alpha: 1),
                  UIColor(red: 0.6784, green: 0.5137, blue: 0.5394, alpha: 1)]
-
 let mainBlue  = UIColor(red: 0.0000, green: 0.3529, blue: 0.6549, alpha: 1)
 let darkerBlue = [UIColor(red: 0.0235, green: 0.3490, blue: 0.6314, alpha: 0.5),
                   UIColor(red: 0.0051, green: 0.3490, blue: 0.6039, alpha: 0.5),
@@ -98,31 +105,16 @@ let brighterBlue = [UIColor(red: 0.1569, green: 0.4235, blue: 0.6745, alpha: 0.5
                     UIColor(red: 0.8941, green: 0.9255, blue: 0.8627, alpha: 0.5),
                     UIColor(red: 0.9882, green: 0.9843, blue: 0.8941, alpha: 0.5)]
 
-
-
-
-
 let calendarCellColor = UIColor(red: 0.9569, green: 0.9569, blue: 0.9255, alpha: 1)
-//let calendarCellSelected = UIColor(red: 0.9255, green: 0.3686, blue: 0.2667, alpha: 1)
-//let calendarCellToday = UIColor(red: 0.7451, green: 0.8353, blue: 0.8863, alpha: 0.1)
 
 let calendarBack = [UIColor(red: 1.0000, green: 0.9922, blue: 0.8941, alpha: 0.5), UIColor(red: 0.0000, green: 0.3529, blue: 0.6549, alpha: 0.5)]
 
-//let calendarBack = [UIColor(red: 0.6784, green: 0.3255, blue: 0.5373, alpha: 0.5), UIColor(red: 0.2353, green: 0.0627, blue: 0.3255, alpha: 0.5)]
-
-
-
 let calendarCellSelected = UIColor(red: 0.2510, green: 0.3333, blue: 0.4039, alpha: 0.1)
+
 let calendarCellToday = calendarBack[0]
 
 let upcomingTextColor = UIColor(red: 1.0000, green: 0.9922, blue: 0.8941, alpha: 1)
+
 let passedTextColor = UIColor(red: 0.0000, green: 0.3529, blue: 0.6549, alpha: 0.8)
 
 let assignmentTextColor = UIColor(red: 1.0000, green: 0.9765, blue: 0.2980, alpha: 0.8)
-
-func extractTime(dateTime: String) -> String{
-    print(dateTime)
-    let start = dateTime.index(after: dateTime.index(of: "T") ?? dateTime.startIndex)
-    let subString = String(dateTime[start..<dateTime.index(start,offsetBy: 8)])
-    return subString
-}

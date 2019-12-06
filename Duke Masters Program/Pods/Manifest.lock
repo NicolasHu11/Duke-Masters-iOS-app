@@ -127,7 +127,6 @@ DEPENDENCIES:
   - Firebase/Storage
   - MSAL
   - MSGraphClientModels
-  - MSGraphClientSDK
   - MSGraphMSALAuthProvider
   - SideMenu (~> 6.0)
 
@@ -186,6 +185,6 @@ SPEC CHECKSUMS:
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
   SideMenu: e49a7d61d1f50e9bdaa866bbb9fc7d903c6400ed
 
-PODFILE CHECKSUM: 97b9ed52c665d3b8b081ec7c53d8f0be4b9ebde8
+PODFILE CHECKSUM: a90b1492a8d3754687a9fd733cc7c294f8549809
 
 COCOAPODS: 1.8.4

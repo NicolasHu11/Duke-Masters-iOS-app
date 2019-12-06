@@ -9,11 +9,10 @@
 import UIKit
 import MSAL
 import MSGraphMSALAuthProvider
-import MSGraphClientSDK
 import MSGraphClientModels
 
+// MARK: Reserved for Add Events to Specified Calendar
 class eventPreperation{
-    
     // properties: required
     var body = ""
     var subject = ""
@@ -114,5 +113,3 @@ extension eventPreperation{
         var range = Range()
     }
 }
-
-
