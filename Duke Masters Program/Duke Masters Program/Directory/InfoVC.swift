@@ -22,7 +22,7 @@ class InfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Info_Name.text! = Name_fromtable
-        Info_Email.text! = Email_fromtable
+        Info_Email.text! = "Email: " + Email_fromtable
         // Do any additional setup after loading the view.
     }
     
