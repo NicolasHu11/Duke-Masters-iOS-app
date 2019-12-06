@@ -28,12 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         print(remoteMessage.appData)
     }
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // below is for login   -Nicolas
-        Switcher.updateRootVC()
-        
+
+
 
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
