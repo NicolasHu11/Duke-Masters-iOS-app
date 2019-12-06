@@ -164,29 +164,48 @@ class DirectoryTableVC: UITableViewController,UISearchBarDelegate {
         }
         
     
-// Search Bar
-func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    print("text input:", searchText)
+// MARK: Search Bar
+    // TODO: add more advanced search function
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        print("text input:", searchText)
 
-    if searchText == "" {
-        Result = studentarray
-        signal_write = false
-    }
-    else { //
-        signal_write = true
-        self.Result = []
-        for student in studentarray {
-            let studentname = student[0] + " " + student[1]
-            if studentname.lowercased().hasPrefix(searchText.lowercased()) {
-                Result.append(student)
+        if searchText == "" {
+            Result = studentarray
+            signal_write = false
+        }
+        else { //
+            signal_write = true
+            self.Result = []
+            for student in studentarray {
+                // Nicolas: adding more on this
+                let studentname = student[0] + " " + student[1]
+                // check prefix
+                if studentname.lowercased().hasPrefix(searchText.lowercased()) {
+                    Result.append(student)
+                }
+                // contains
+                else if studentname.lowercased().contains(searchText.lowercased()){
+                    Result.append(student)
+                }
+                // if there's space in search txt
+                else if searchText.contains(" ") {
+                    // separate them
+                    let searchArray = searchText.lowercased().components(separatedBy: " ")
+                    if student[0].lowercased().contains(searchArray[0]) || student[1].lowercased().contains(searchArray[1]) {
+                        Result.append(student)
+                    }
+                    else if student[0].lowercased().contains(searchArray[1]) || student[1].lowercased().contains(searchArray[0]) {
+                        Result.append(student)
+                    }
+                }
+
+                
             }
         }
+        
+        self.tableView.reloadData()
+        
     }
-    if Result.count>0{
-        print("search result 0: input", Result[0])
-    }
-    self.tableView.reloadData()
-}
 
     
 

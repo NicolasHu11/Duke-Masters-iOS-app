@@ -18,9 +18,7 @@ pod 'Firebase/Storage'
 # add MSAL(Microsoft Authentication Library) for iOS
 pod 'MSAL'
 
-
 # add Microsoft Graph SDK
-pod 'MSGraphClientSDK'
 pod 'MSGraphMSALAuthProvider'
 pod 'MSGraphClientModels'
 

@@ -8,12 +8,12 @@
 
 import UIKit
 
+// MARK: The CollectionViewCell for Calendar
 class CalendarCollectionViewCell: UICollectionViewCell {
     
     let color1  = UIColor(red: 0.9569, green: 0.9569, blue: 0.9255, alpha: 1)
     let color2 = UIColor(red: 0.0157, green: 0.1412, blue: 0.298, alpha: 1)
     let color3 = UIColor(red: 0.3922, green: 0.549, blue: 0.7686, alpha: 1)
-    
     
     @IBOutlet weak var date: UILabel!
     
@@ -25,8 +25,8 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     func setShape(width: CGFloat, height: CGFloat){
         // Set a circular item cell
         let shape = CGRect(x: 5.0, y: (height/2.0 - width/2.0 + 5.0), width: width - 10.0, height: width - 10.0)
-        //print(shape)
-        self.date.frame = shape // Set the position of label
+        // Set the position of label (that represents the date)
+        self.date.frame = shape
         let path = UIBezierPath(ovalIn: shape)
         let mask = CAShapeLayer()
         mask.frame = self.bounds

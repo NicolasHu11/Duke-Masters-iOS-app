@@ -12,7 +12,6 @@ class SafetyPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func Call911(_ sender: Any) {
@@ -30,17 +29,14 @@ class SafetyPageViewController: UIViewController {
         self.CALL("CALL O&E Safety", number: "919-684-2794")
     }
     
-    //canOpenURL是否有50次的次数限制??
-    //手机上跳转了50次之后还是能跳的，应该是限制50个app而不是50次跳转
+    // Note that this only works in cell phone, but not on simulator
     func CALL(_ call: String, number: String){
         let controller = UIAlertController(title: call, message: "\(number)", preferredStyle: .actionSheet)
         let phoneAction = UIAlertAction(title: call, style: .default){ (_) in
             if let url = URL(string: "tel://\(number)"){
                 print(url)
                 if UIApplication.shared.canOpenURL(url) {
-                    //print("这谁他妈知道是为啥打不开界面")
                     UIApplication.shared.open(url)
-                    //print("小声bb：因为simulator上不让跑")
                 }
                 else{
                     print("Can't open url!")
@@ -82,14 +78,4 @@ class SafetyPageViewController: UIViewController {
             print("Invalid url!")
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

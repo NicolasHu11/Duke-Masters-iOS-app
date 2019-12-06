@@ -22,6 +22,8 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
     var users = [User]()
     var allstudent_flag = true
     var inputtextBottomAnchor: NSLayoutConstraint?
+    
+    @IBOutlet weak var nbar: UINavigationItem!
     lazy var inputTextview: UITextView = {
         let tv = UITextView()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -44,8 +46,10 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
         navigationItem.title = "Chat Log Controller"
         if(allstudent_flag){
             controlFlag.title = "show student"
+            nbar.title = "Staff"
         }else{
             controlFlag.title = "show staff"
+            nbar.title = "Student"
         }
         print("before finduser")
         findUser()
@@ -174,8 +178,10 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
         print(allstudent_flag)
         if(allstudent_flag){
             controlFlag.title = "show student"
+            nbar.title = "Staff"
         }else{
             controlFlag.title = "show staff"
+            nbar.title = "Student"
         }
         
         updateMessage()
