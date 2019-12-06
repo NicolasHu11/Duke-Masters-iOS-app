@@ -35,19 +35,27 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
    //left bar button, show student/staff message
     @IBOutlet weak var controlFlag: UIBarButtonItem!
     
-    override func viewDidAppear(_ animated: Bool) {
-        
+//    override func viewDidAppear(_ animated: Bool) {
+//        self.collectionView.reloadData()
+//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.collectionView.reloadData()
+        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.users = []
-        navigationItem.title = "Notification"
+        
+        
         //change the title of left bar button
         if(allstudent_flag){
             controlFlag.title = "show student"
+            navigationItem.title = "STAFF"
         }else{
             controlFlag.title = "show staff"
+            navigationItem.title = "STUDENT"
         }
         //find the current user info
         findUser()
@@ -116,7 +124,6 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
              //for some reason uid = nil
              return
          }
-        
     Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
                 
         if let dictionary = snapshot.value as? [String: AnyObject] {
@@ -136,17 +143,16 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
     //MARK: update message list every ? s
     func updateMessage(){
         self.users = []
-        
         if(allstudent_flag){
-            //staff messages
-            fetchUser(tablename: "Main_messages")
+            controlFlag.title = "show student"
+            navigationItem.title = "STAFF"
         }else{
-            //student messages
-            fetchUser(tablename: "messages")
+            controlFlag.title = "show staff"
+            navigationItem.title = "STUDENT"
         }
-        DispatchQueue.main.async(execute: {
-            self.collectionView.reloadData()
-        })
+//        DispatchQueue.main.async(execute: {
+//            self.collectionView.reloadData()
+//        })
     }
     //MARK: Grap the info from firebase
     func fetchUser(tablename: String) {
@@ -170,17 +176,23 @@ class chatCollectionViewController: UICollectionViewController, UICollectionView
     }
     //left button action, change the flag to control staff/student
     @IBAction func clickAction(_ sender: Any) {
-        allstudent_flag = !allstudent_flag
-        if(allstudent_flag){
-            controlFlag.title = "show student"
-        }else{
-            controlFlag.title = "show staff"
-        }
-        updateMessage()
+        
+//        updateMessage()
         DispatchQueue.main.async(execute: {
+            self.allstudent_flag = !self.allstudent_flag
+            if(self.allstudent_flag){
+                self.controlFlag.title = "show student"
+                self.navigationItem.title = "STAFF"
+            }else{
+                self.controlFlag.title = "show staff"
+                self.navigationItem.title = "STUDENT"
+            }
+            self.updateMessage()
             self.collectionView.reloadData()
+                    print("change!")
+
         })
-        print("change!")
+//        collectionView.reloadData()
     }
     //save messages to the database when send messages
     @objc func handleSend() {
