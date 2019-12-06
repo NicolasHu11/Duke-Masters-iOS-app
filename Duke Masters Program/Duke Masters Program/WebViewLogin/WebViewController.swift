@@ -94,6 +94,8 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
         if status == true && thisNetId != ""{
             print("default status is:", status)
             print("defaults netid is:", thisNetId)
+            
+            self.email = thisNetId + "@duke.edu"
             localAuth()
         }
         
@@ -121,6 +123,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
                                 // here we login succssfully
                                 sleep(2)
                                 self.performSegue(withIdentifier: "webviewToHome", sender: self)
+                                self.handleRegister()
                             })
                             
     
@@ -167,6 +170,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
             DispatchQueue.main.async(execute: {
                 self.getSakaiInfo() // now get info
                 // Switcher update root VC
+                sleep(2)
                 UserDefaults.standard.set(true, forKey: "status")
                 print("netid before setting key",userNetId)
                 UserDefaults.standard.set(userNetId, forKey: "netid")
@@ -226,6 +230,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
                 // here we login succssfully
                 sleep(2)
                 self.performSegue(withIdentifier: "webviewToHome", sender: self)
+                print("ℹ️ debug: current logged in is : ", self.netid, self.name)
             })
         }
         
@@ -295,9 +300,10 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
 //                            print("ℹ️ debug: membership: netID", userId)
                             self.netid = thisEid.components(separatedBy: "@")[0]
                             self.email = thisEid
-                            userNetId = self.netid
+                            userNetId = thisEid.components(separatedBy: "@")[0]
                             
                             UserDefaults.standard.set(userNetId, forKey: "netid")
+                            
 
                         }
                         // this is user Id on sakai, a token
@@ -491,9 +497,11 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
             
             // adding the firebase login
             print("fan_test2, before handler", self.name)
+            print("fan_test2, before handler: email", self.email )
 //            print("fan_test, before handler, global", userName)
             self.handleRegister()
             print("fan_test2: after hndler ", self.name)
+            print("fan_test2, after handler: email", self.email )
 //            print("fan_test, after handler, global", userName)
         }// end task
         task.resume()
@@ -527,6 +535,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
     
     //MARK: firebase: login user
     func loginUser(){
+        print("enter loginUser")
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             if error != nil {
                 print(error ?? "")
