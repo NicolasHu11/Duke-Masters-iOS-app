@@ -194,10 +194,6 @@ class DirectoryTableVC: UITableViewController,UISearchBarDelegate {
             for student in studentarray {
                 // Nicolas: adding more on this
                 let studentname = student[0] + " " + student[1]
-                // check prefix
-                if studentname.lowercased().hasPrefix(searchText.lowercased()) {
-                    Result.append(student)
-                }
                 // contains
                 if studentname.lowercased().contains(searchText.lowercased()){
                     Result.append(student)
