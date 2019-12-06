@@ -121,7 +121,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
                             
                             self.dismiss(animated: true, completion: {
                                 // here we login succssfully
-                                sleep(2)
+//                                sleep(2)
                                 self.performSegue(withIdentifier: "webviewToHome", sender: self)
                                 self.handleRegister()
                             })
