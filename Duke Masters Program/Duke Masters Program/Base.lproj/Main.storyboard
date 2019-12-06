@@ -196,7 +196,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="sNK-5N-KZM" kind="presentation" modalPresentationStyle="automatic" id="GhE-0c-qPw"/>
+                                            <segue destination="18m-S9-uLv" kind="presentation" modalPresentationStyle="automatic" id="GhE-0c-qPw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-6v-riy">
@@ -502,7 +502,7 @@
             </objects>
             <point key="canvasLocation" x="3862" y="1544"/>
         </scene>
-        <!--Room Reservation View Controller-->
+        <!--Reserve a Room-->
         <scene sceneID="UqL-q3-sT8">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="sNK-5N-KZM" customClass="RoomReservationViewController" customModule="Duke_Masters_Program" customModuleProvider="target" sceneMemberID="viewController">
@@ -510,10 +510,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17L-cR-MvY">
-                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17L-cR-MvY">
+                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -521,15 +520,22 @@
                             </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="17L-cR-MvY" firstAttribute="top" secondItem="dnm-4H-In0" secondAttribute="top" constant="56" id="E4f-vH-bPr"/>
+                            <constraint firstItem="17L-cR-MvY" firstAttribute="trailing" secondItem="ox7-4X-gE3" secondAttribute="trailing" id="dVh-Fj-SOi"/>
+                            <constraint firstAttribute="bottom" secondItem="17L-cR-MvY" secondAttribute="bottom" id="fTk-Bq-J3a"/>
+                            <constraint firstItem="17L-cR-MvY" firstAttribute="leading" secondItem="ox7-4X-gE3" secondAttribute="leading" id="yey-uS-FfI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ox7-4X-gE3"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Reserve a Room" id="h73-2z-PHY"/>
                     <connections>
                         <outlet property="RoomReservationWeb" destination="17L-cR-MvY" id="gHG-y7-UsG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wun-Tj-Spy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3862" y="747"/>
+            <point key="canvasLocation" x="4543" y="745"/>
         </scene>
         <!--DirectoryTable-->
         <scene sceneID="jna-CP-K1l">
@@ -943,8 +949,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fQc-dr-6f2" colorLabel="IBBuiltInLabel-Red">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -971,6 +975,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8e3-BJ-LVs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.95810407399999997" green="0.95840436220000003" blue="0.9258313775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                         </textAttributes>
@@ -1177,6 +1182,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MjV-0U-Ibp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1839" y="693"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bCK-D5-vUF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="18m-S9-uLv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v5Q-CU-4c2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0039215686269999999" green="0.12941176469999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sNK-5N-KZM" kind="relationship" relationship="rootViewController" id="AoF-S6-IeZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjZ-38-UZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3861.5999999999999" y="746.17691154422789"/>
         </scene>
     </scenes>
     <resources>
