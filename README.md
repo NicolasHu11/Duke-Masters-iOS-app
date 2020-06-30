@@ -1,22 +1,26 @@
 # Duke Masters Program
 
+## Overview 
+- This app is developed to help students stay informed and connected to the duke community
+- [demo video;  ](https://drive.google.com/file/d/1iwxX7ltqCFGU_V2udRATKxXEpuucrmzk/view?usp=drivesdk)  [presentation](https://drive.google.com/file/d/1pMMU7SbrtT4T5qCilLUpaeacbWcaj1dF/view?usp=sharing)
 - Group Memebers: Yijia Hu, Fan Zhang, Xiaochen Zhou, Yilun Sun 
-- ECE 564, Mobile App
-- Duke University, 2019 Fall
+- ECE 564, Mobile App, Duke University, 2019 Fall
 
-## How to use
-### build from repo
+
+
+
+
+### Build from repo
 - Download the repo and open in Xcode, open `.xcworkspace` instead of `xcodeproj`
 - Build and install on iPhone 8 (might have some UI issue on newer model)
 - Login using duke NetId, re-login using faceID
 - Checkout each function
 - Logout using button on sidebar
 
-### download from appstore
-- duke colab appstore was out of survise so we couldn't distribute app
+
+-------------
 
 ## Features Overview
-
 ### Student Directory: 
 - Shown all students’ name and email information, support name search.
 
@@ -33,11 +37,11 @@
 - Input textbox support automatic enlarge.
 
 ### Weblogin: 
-- present Duke Shibboleth login via Sakai Server with MFA supported. 
+- Present Duke Shibboleth login via Sakai Server with MFA supported. 
 - Relogin and logout are supported as well. 
 
 ### Information extraction: 
-information are pulled from Duke Sakai, Duke Colab API
+- Information is pulled from Duke Sakai, Duke Colab API
 
 ### Build-in Calendar:
 
@@ -59,7 +63,7 @@ information are pulled from Duke Sakai, Duke Colab API
 ### Newly added after presentation! 
 - Log out function 
 - Log in with FaceID, when you have logged in before
-
+--------------------------
 ## Implementation Details 
 
 ### Student Directory:
